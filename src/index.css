@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Small accessibility polish */
+:focus-visible { outline: none; }

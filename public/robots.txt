@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hendersonlandscapingservices.co.uk/sitemap.xml
