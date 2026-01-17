@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const CONTACT = {
   phoneDisplay: "07766 645221",
   phoneTel: "07766645221",
-  email: "hendersonls@mail.co.uk",
+  email: "enquiries@hendersonlandscapingservices.co.uk",
 };
 
 const NAV_ITEMS = [
@@ -2162,4 +2162,5 @@ function Footer() {
 }
 
 export default App;
+
 
