@@ -13,7 +13,7 @@ import "./index.css";
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
 
   // Ensure gtag.js is loaded
-  if (!document.querySelector('script[src*="googletagmanager.com/gtag/js?id="])) {
+  if (!document.querySelector('script[src*="googletagmanager.com/gtag/js?id="]')) {
     const s = document.createElement("script");
     s.async = true;
     s.src = "https://www.googletagmanager.com/gtag/js?id=AW-17866270140";
