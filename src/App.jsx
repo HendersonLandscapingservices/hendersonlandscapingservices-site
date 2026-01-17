@@ -505,7 +505,7 @@ function HomeSection({ onBookClick }) {
                 Request a quote
               </button>
               <span className="text-xs text-emerald-100/80">
-                Free, no-obligation quotes &middot; Fully insured
+                Free, no-obligation quotes · Fully insured
               </span>
             </div>
 
@@ -737,7 +737,7 @@ function ServicesSection({ onBookClick }) {
 function AboutSection() {
   return (
     <section>
-      {/* Page hero with faded image "“ consistent size with other internal pages */}
+      {/* Page hero with faded image "â€œ consistent size with other internal pages */}
       <div className="relative border-b border-slate-200 bg-slate-950 text-white">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <img
@@ -797,7 +797,7 @@ function AboutSection() {
           </div>
         </div>
 
-        {/* Main about copy "“ centred block, plus sustainability box */}
+        {/* Main about copy "â€œ centred block, plus sustainability box */}
         <div className="mx-auto mt-10 max-w-3xl space-y-4 text-sm leading-relaxed text-slate-700">
           <p>
             After years working for local gardening companies and the council, I decided it was time to start my own
@@ -1450,7 +1450,7 @@ function HintsTipsSection() {
         <div className="w-full max-w-2xl rounded-2xl border border-emerald-100 bg-emerald-50/60 p-4 text-xs text-slate-800">
           <p className="font-medium text-emerald-900">How to use this page</p>
           <p className="mt-2 text-slate-700">
-            We keep this section updated with seasonal advice, common problems we see in local gardens, and simple checklists you can follow yourself —
+            We keep this section updated with seasonal advice, common problems we see in local gardens, and simple checklists you can follow yourself â€”
             or use as a starting point for a professional visit.
           </p>
         </div>
@@ -1483,7 +1483,7 @@ function HintsTipsSection() {
                   {post.title}
                 </h3>
                 <p className="mt-1 text-xs text-slate-500">
-                  {post.published} &middot; {post.readTime}
+                  {post.published} · {post.readTime}
                 </p>
               </header>
 
@@ -2077,7 +2077,7 @@ function Footer() {
         {/* Right: tagline + social icons tight together */}
         <div className="flex items-center gap-3 sm:ml-auto sm:justify-end">
           <p className="whitespace-nowrap text-[11px]">
-            Premium garden care &middot; North West
+            Premium garden care · North West
           </p>
 
           {/* Instagram "" real profile */}
