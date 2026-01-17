@@ -982,11 +982,6 @@ function BookingSection() {
     // Honeypot (bots)
     const company = (fd.get("company") || "").toString().trim();
     if (company) {
-            // [ADS_CONVERSION_LEAD] Google Ads conversion: Submit lead form
-      window.gtag?.("event", "conversion", {
-        send_to: "AW-17866270140/U4gPCLOF9eEbELzLpsdC",
-      });
-
       setStatus({
         type: "success",
         message: "Thanks — your enquiry has been received.",
