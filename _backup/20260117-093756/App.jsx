@@ -1014,11 +1014,6 @@ function BookingSection() {
         throw new Error(text || `Request failed (${res.status})`);
       }
 
-      
-      // Google Ads conversion: Submit lead form
-      window.gtag?.("event", "conversion", {
-        send_to: "AW-17866270140/U4gPCLOF9eEbELzLpsdC",
-      });
       setStatus({
         type: "success",
         message:
