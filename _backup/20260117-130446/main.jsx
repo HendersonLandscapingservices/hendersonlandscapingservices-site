@@ -16,7 +16,7 @@ import "./index.css";
   if (!document.querySelector(script[src*="googletagmanager.com/gtag/js?id="])) {
     const s = document.createElement("script");
     s.async = true;
-    s.src = "https://www.googletagmanager.com/gtag/js?id=AW-17866270140";
+    s.src = https://www.googletagmanager.com/gtag/js?id=;
     s.setAttribute("data-cfasync", "false");
     document.head.appendChild(s);
   }
