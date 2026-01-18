@@ -367,7 +367,8 @@ function App() {
         {activeTab === "hints" && <HintsTipsSection />}
       </main>
 
-      <Footer />
+      <Footer />
+
 
       <FloatingActions onOpenEstimator={() => setShowEstimator(true)} />
 {showEstimator && (
@@ -2201,7 +2202,6 @@ function Footer() {
 }
 
 export default App;
-
 
 
 
