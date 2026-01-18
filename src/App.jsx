@@ -537,7 +537,7 @@ function HomeSection({ onBookClick }) {
  * SERVICES
  */
 function ServicesSection({ onBookClick }) {
-  const [serviceView, setServiceView] = useState("all");
+  const [openServiceId, setOpenServiceId] = useState(null);
 
   const services = [
     {
@@ -639,9 +639,6 @@ function ServicesSection({ onBookClick }) {
       tags: ["Grounds maintenance", "Shared spaces"],
     },
   ];
-
-  const visibleServices = serviceView === "all" ? services : services.filter((s) => s.id === serviceView);
-
   return (
     <section>
       {/* Page hero with faded image */}
@@ -709,53 +706,82 @@ function ServicesSection({ onBookClick }) {
       </div>
 
       <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
-        <div className="grid gap-6 md:grid-cols-2">
-          {visibleServices.map((service) => (
-            <article
-              key={service.title}
-              id={service.id}
-              className="scroll-mt-28 flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
-            >
-              <div>
-                <h3 className="text-base font-semibold tracking-tight text-slate-900">
-                  {service.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-700">
-                  {service.summary}
-                </p>
-                {service.title === "Commercial & shared-space maintenance" && (
-                  <a
-                    href="/guides/commercial-maintenance-overview.pdf"
-                    className="mt-2 inline-flex text-xs font-semibold text-emerald-700 underline underline-offset-2"
-                    download
-                  >
-                    Download our commercial maintenance overview
-                  </a>
-                )}
-              </div>
-              <div className="mt-4 flex flex-wrap items-center justify-between gap-2 text-xs">
-                <div className="flex flex-wrap gap-1.5">
-                  {service.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-emerald-50 px-2.5 py-1 font-medium text-emerald-700"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                <div className="rounded-2xl border border-slate-200 bg-white shadow-sm">
+          {services.map((service, idx) => {
+            const isOpen = openServiceId === service.id;
+            return (
+              <div
+                key={service.id || service.title}
+                className={idx === 0 ? "" : "border-t border-slate-200"}
+              >
                 <button
                   type="button"
-                  onClick={onBookClick}
-                  className="text-xs font-semibold text-emerald-700 underline-offset-2 hover:underline"
+                  onClick={() =>
+                    setOpenServiceId((prev) => (prev === service.id ? null : service.id))
+                  }
+                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+                  aria-expanded={isOpen}
                 >
-                  Enquire about this
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold tracking-tight text-slate-900">
+                      {service.title}
+                    </p>
+                    <p className="mt-1 text-xs text-slate-500">
+                      {isOpen ? "Click to collapse" : "Click to view details"}
+                    </p>
+                  </div>
+                  <span
+                    className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-base font-semibold text-slate-700"
+                    aria-hidden="true"
+                  >
+                    {isOpen ? "-" : "+"}
+                  </span>
                 </button>
+
+                {isOpen && (
+                  <div className="px-5 pb-5">
+                    <p className="text-sm leading-relaxed text-slate-700">
+                      {service.summary}
+                    </p>
+
+                    {service.title === "Commercial & shared-space maintenance" && (
+                      <a
+                        href="/guides/commercial-maintenance-overview.pdf"
+                        className="mt-3 inline-flex text-xs font-semibold text-emerald-700 underline underline-offset-2"
+                        download
+                      >
+                        Download our commercial maintenance overview
+                      </a>
+                    )}
+
+                    <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+                      <div className="flex flex-wrap gap-1.5">
+                        {service.tags?.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={onBookClick}
+                        className="text-xs font-semibold text-emerald-700 underline-offset-2 hover:underline"
+                      >
+                        Enquire about this
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
-            </article>
-          ))}
+            );
+          })}
         </div>
-        <p className="mt-6 text-[11px] text-slate-500">
+
+         text-[11px] text-slate-500">
           Our online estimator gives a guide price for key services. Final
           quotes are always confirmed after a quick visit or photos of your
           garden.
@@ -918,9 +944,6 @@ function DesignSection({ onEnquireClick }) {
       hasChecklist: false,
     },
   ];
-
-  const visibleServices = serviceView === "all" ? services : services.filter((s) => s.id === serviceView);
-
   return (
     <section>
       {/* Page hero with faded image */}
@@ -2064,9 +2087,6 @@ function TestimonialsSection() {
       name: "Nina, Burnley",
     },
   ];
-
-  const visibleServices = serviceView === "all" ? services : services.filter((s) => s.id === serviceView);
-
   return (
     <section className="border-t border-slate-200 bg-slate-50">
       <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
