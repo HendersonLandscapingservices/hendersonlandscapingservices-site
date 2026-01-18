@@ -4,8 +4,8 @@
 
 [36mvite v5.4.21 [32mbuilding for production...[36m[39m
 transforming...
-[32mÔ£ô[39m 4 modules transformed.
-x Build failed in 1.21s
+[32mÔ£ô[39m 7 modules transformed.
+x Build failed in 1.10s
 error during build:
 [vite:esbuild] Transform failed with 1 error:
 C:/Users/isobe/OneDrive/hendersonlandscapingservices_site_v2/src/App.jsx:956:66: ERROR: Unexpected "}"
