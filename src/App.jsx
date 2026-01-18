@@ -9,6 +9,12 @@ const CONTACT = {
   email: "enquiries@hendersonlandscapingservices.co.uk",
 };
 
+
+
+const WHATSAPP = {
+  phoneIntl: "447766645221",
+  message: "Hi Joel - I'd like a quote please. My postcode is ____ and I'm looking for help with ____.",
+};
 const NAV_ITEMS = [
   { id: "home", label: "Home" },
   { id: "design", label: "Design" },
@@ -360,6 +366,9 @@ function App() {
       </main>
 
       <Footer />
+
+
+      <WhatsAppWidget />
 
       <EstimatorWidgetButton onOpen={() => setShowEstimator(true)} />
 
@@ -1636,6 +1645,42 @@ function HintsTipsSection() {
         </div>
       </section>
     </section>
+  );
+}
+
+
+/**
+ * WHATSAPP WIDGET (floating)
+ */
+function WhatsAppWidget() {
+  const href =
+    "https://wa.me/" +
+    WHATSAPP.phoneIntl +
+    "?text=" +
+    encodeURIComponent(WHATSAPP.message);
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className="fixed bottom-4 right-4 z-40 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/30 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+      aria-label="Chat on WhatsApp"
+      title="Chat on WhatsApp"
+    >
+      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/10">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          className="h-4 w-4"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M19.11 17.45c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.21-.59.07-.27-.14-1.14-.42-2.17-1.35-.8-.71-1.34-1.58-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.36.99 2.68 1.13 2.86.14.18 1.95 2.97 4.73 4.16.66.29 1.18.46 1.58.59.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.82-1.28.23-.63.23-1.16.16-1.28-.07-.12-.25-.18-.52-.32zM16.03 3.2c-7.11 0-12.89 5.78-12.89 12.89 0 2.28.6 4.51 1.75 6.48L3 29l6.6-1.73c1.9 1.04 4.04 1.58 6.22 1.58 7.11 0 12.89-5.78 12.89-12.89S23.14 3.2 16.03 3.2zm0 23.3c-2.03 0-4.03-.55-5.79-1.6l-.41-.24-3.92 1.03 1.05-3.82-.27-.43a10.45 10.45 0 0 1-1.66-5.69c0-5.78 4.7-10.48 10.48-10.48S26.51 9.97 26.51 15.75 21.81 26.5 16.03 26.5z"/>
+        </svg>
+      </span>
+      WhatsApp
+    </a>
   );
 }
 
