@@ -539,21 +539,6 @@ function HomeSection({ onBookClick }) {
 function ServicesSection({ onBookClick }) {
   const categories = [
     {
-      id: "design-planting",
-      nav: "Design & planting",
-      title: "Design and planting plans",
-      summary:
-        "Structured, practical design support - from layout guidance and phased improvement plans to planting ideas that look good and stay manageable.",
-      includes: [
-        "Design consultations (online or on-site)",
-        "Planting plans and border refresh concepts",
-        "Phased renovation planning (budget-led)",
-        "Advice on materials, levels, access and drainage considerations",
-      ],
-      tags: ["Design", "Planting plans"],
-      cta: "Enquire about design",
-    },
-    {
       id: "lawn-care",
       nav: "Lawn care",
       title: "Lawn care (mowing, treatments & renovation)",
@@ -678,28 +663,17 @@ function ServicesSection({ onBookClick }) {
 
       {/* Domestic + commercial statement (reduces the need for a separate commercial tile) */}
       <div className="mx-auto max-w-6xl px-4 pt-6">
-        <div className="rounded-2xl border border-slate-200 bg-white p-4 text-xs text-slate-700 shadow-sm">
-          <p className="font-semibold text-slate-900">Domestic and commercial clients</p>
+        <div className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-700 shadow-sm">
+          <p className="text-base font-semibold text-slate-900">Domestic and commercial clients</p>
           <p className="mt-1 text-slate-600">
-            We work with homeowners, landlords, shared spaces and businesses across East Lancashire. If you need a regular visit schedule,
-            simple reporting, or a maintenance plan, mention it in your enquiry and we’ll recommend the best approach.
+            We work with homeowners, landlords, and businesses across East Lancashire.
           </p>
         </div>
       </div>
 
       {/* Carousel + details */}
       <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
-        <div className="flex items-end justify-between gap-4">
-          <div>
-            <h2 className="text-xl font-semibold tracking-tight text-slate-900">
-              Choose a category
-            </h2>
-            <p className="mt-1 text-sm text-slate-600">
-              Use the arrows or select a category below - you’ll only see one at a time.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2">
+        <div className="flex items-center justify-end gap-2">
             <button
               type="button"
               onClick={prev}
@@ -793,12 +767,12 @@ function ServicesSection({ onBookClick }) {
         </div>
 
         {/* Small print stays */}
-        <p className="mt-6 text-[11px] text-slate-500">
+        <p className="mt-6 text-sm text-slate-600">
           Our online estimator gives a guide price for key services. Final
           quotes are always confirmed after a quick visit or photos of your
           garden.
         </p>
-        <p className="mt-2 text-[11px] text-slate-500">
+        <p className="mt-2 text-sm text-slate-600">
           Don&apos;t see a service you need? Please ask - we aim to be a
           one-stop shop for all external hard and soft landscaping
           requirements. If we can&apos;t quote directly, we&apos;ll usually be
