@@ -663,18 +663,7 @@ function ServicesSection({ onBookClick }) {
           </div>
         </div>
       </div>
-
-      {/* Accordion intro */}
-      <div className="mx-auto max-w-6xl px-4 pt-6">
-        <div className="rounded-2xl border border-slate-200 bg-white p-4 text-xs text-slate-700 shadow-sm">
-          <p className="font-semibold text-slate-900">Browse services</p>
-          <p className="mt-1 text-slate-600">
-            Click a service to view full details. This keeps the page clean and easy to scan.
-          </p>
-        </div>
-      </div>
-
-      {/* Accordion */}
+{/* Accordion */}
       <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
         <div className="rounded-2xl border border-slate-200 bg-white shadow-sm">
           {services.map((service, idx) => {
@@ -698,10 +687,7 @@ function ServicesSection({ onBookClick }) {
                     <p className="text-sm font-semibold tracking-tight text-slate-900">
                       {service.title}
                     </p>
-                    <p className="mt-1 text-xs text-slate-500">
-                      {isOpen ? "Click to collapse" : "Click to view details"}
-                    </p>
-                  </div>
+</div>
                   <span
                     className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-base font-semibold text-slate-700"
                     aria-hidden="true"
