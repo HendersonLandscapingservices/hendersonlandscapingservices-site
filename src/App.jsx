@@ -1518,7 +1518,8 @@ function HintsTipsSection() {
           </div>
         </div>
       </div>
-      </div>
+      </section>
+
       {/* Posts grid */}
       <section className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
 <div className="mt-8 grid gap-6 md:grid-cols-2">
