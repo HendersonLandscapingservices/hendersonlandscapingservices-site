@@ -1478,50 +1478,7 @@ function GallerySection() {
 /**
  * HINTS & TIPS
  */
-function HintsTipsSection() {
-  return (
-    <section className="min-h-screen bg-slate-50">
-      {/* Hero with faded image */}
-      <section className="relative border-b border-slate-200 bg-slate-950 text-white">
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <img
-            src="/images/gallery-3.jpg"
-            alt="Soft evening light over a well-kept garden"
-            className="h-full w-full object-cover opacity-40"
-            decoding="async"
-          />
-        </div>
-        <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:flex-row lg:items-center lg:justify-between lg:py-12">
-          <div className="flex-1 max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200">
-              Hints &amp; Tips
-            </p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Practical advice for Northern homes
-            </h1>
-          </div>
-</div>
-      </section>
-
-            {/* How to use this page (moved out of hero for consistent hero height) */}
-                  <div className="mx-auto max-w-6xl px-4 pt-6">
-        <div className="w-full max-w-3xl rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5 text-base text-slate-800">
-          <p className="text-lg font-semibold text-emerald-900">How to use this page</p>
-          <p className="mt-2 text-slate-700">
-            We keep this section updated with seasonal advice, common problems we see in local gardens, and simple checklists you can follow yourself - or use as a starting point for a professional visit.
-          </p>
-
-          <div className="mt-4 rounded-xl border border-emerald-100 bg-white/80 p-4">
-            <p className="text-base font-semibold text-slate-900">Latest hints &amp; tips</p>
-            <p className="mt-1 text-sm text-slate-700">
-              Browse our latest posts below. We will continue to add seasonal guides and deep dives over time.
-            </p>
-          </div>
-        </div>
-      </div>
-      </section>
-
-      {/* Posts grid */}
+{/* Posts grid */}
       <section className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
 <div className="mt-8 grid gap-6 md:grid-cols-2">
           {hintsTipsPosts.map((post) => (
