@@ -953,7 +953,7 @@ function DesignSection({ onEnquireClick }) {
  * FIX: send to /api/enquiry (Cloudflare Pages Function) so it lands in email.
  */
 function BookingSection() {
-  const [status, setStatus] = useState({ type: "idle", message: ""});
+  const [status, setStatus] = useState({ type: "idle", message: - });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
