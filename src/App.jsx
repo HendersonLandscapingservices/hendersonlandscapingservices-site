@@ -1497,30 +1497,24 @@ function HintsTipsSection() {
       </section>
 
             {/* How to use this page (moved out of hero for consistent hero height) */}
-      <div className="mx-auto max-w-6xl px-4 pt-6">
-        <div className="w-full max-w-2xl rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5 text-sm text-slate-800">
-          <p className="text-base font-semibold text-emerald-900">How to use this page</p>
+            <div className="mx-auto max-w-6xl px-4 pt-6">
+        <div className="w-full max-w-3xl rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5 text-base text-slate-800">
+          <p className="text-lg font-semibold text-emerald-900">How to use this page</p>
           <p className="mt-2 text-slate-700">
-            We keep this section updated with seasonal advice, common problems we see in local gardens, and simple checklists you can follow yourself -
-            or use as a starting point for a professional visit.
+            We keep this section updated with seasonal advice, common problems we see in local gardens, and simple checklists you can follow yourself - or use as a starting point for a professional visit.
           </p>
+
+          <div className="mt-4 rounded-xl border border-emerald-100 bg-white/80 p-4">
+            <p className="text-base font-semibold text-slate-900">Latest hints &amp; tips</p>
+            <p className="mt-1 text-sm text-slate-700">
+              Browse our latest posts below. We will continue to add seasonal guides and deep dives over time.
+            </p>
+          </div>
         </div>
       </div>
       {/* Posts grid */}
       <section className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
-        <div className="flex items-end justify-between gap-4">
-          <div>
-            <h2 className="text-xl font-semibold tracking-tight text-slate-900">
-              Latest hints &amp; tips
-            </h2>
-            <p className="mt-1 text-sm text-slate-600">
-              Browse our latest posts below. We will continue to add seasonal
-              guides and deep dives over time.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+<div className="mt-8 grid gap-6 md:grid-cols-2">
           {hintsTipsPosts.map((post) => (
             <article
               key={post.id}
@@ -1653,7 +1647,7 @@ function WhatsAppWidget() {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="fixed bottom-12 left-1/2 z-40 inline-flex -translate-x-1/2 transform items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/30 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+      className="fixed bottom-16 left-1/2 z-50 inline-flex -translate-x-1/2 transform items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/30 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
       aria-label="Chat on WhatsApp"
       title="Chat on WhatsApp"
     >
@@ -1675,7 +1669,7 @@ function EstimatorWidgetButton({ onOpen }) {
     <button
       type="button"
       onClick={onOpen}
-      className="fixed bottom-12 left-1/2 z-40 inline-flex -translate-x-1/2 transform items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/40 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+      className="fixed bottom-16 left-1/2 z-50 inline-flex -translate-x-1/2 transform items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/40 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
     >
       <span className="h-2 w-2 rounded-full bg-emerald-200" />
       Quick price estimator
