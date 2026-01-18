@@ -537,108 +537,120 @@ function HomeSection({ onBookClick }) {
  * SERVICES
  */
 function ServicesSection({ onBookClick }) {
-  const [openServiceId, setOpenServiceId] = useState(null);
-
-  const services = [
+  const categories = [
     {
-      id: "mowing-lawn-care",
-      title: "Mowing, lawn care & renovation",
+      id: "design-planting",
+      nav: "Design & planting",
+      title: "Design and planting plans",
       summary:
-        "Regular mowing, edging, lawn treatments and renovation work such as scarifying, aeration and overseeding - all tailored to your lawn and how you use the space.",
-      tags: ["Regular cuts", "Scarifying & aeration"],
+        "Structured, practical design support - from layout guidance and phased improvement plans to planting ideas that look good and stay manageable.",
+      includes: [
+        "Design consultations (online or on-site)",
+        "Planting plans and border refresh concepts",
+        "Phased renovation planning (budget-led)",
+        "Advice on materials, levels, access and drainage considerations",
+      ],
+      tags: ["Design", "Planting plans"],
+      cta: "Enquire about design",
     },
     {
-      id: "garden-care-renovation",
-      title: "Garden care & renovation",
+      id: "lawn-care",
+      nav: "Lawn care",
+      title: "Lawn care (mowing, treatments & renovation)",
       summary:
-        "Ongoing or one-off garden care, including weeding, border maintenance, reshaping beds and phased tidy-ups to bring tired gardens back under control.",
-      tags: ["Weeding & borders", "Garden renovation"],
+        "Everything lawn-related in one place: regular mowing, edging and seasonal improvement work, plus renovation when the lawn needs a reset.",
+      includes: [
+        "Regular mowing and edging",
+        "Scarifying and aeration",
+        "Overseeding and top-dressing guidance",
+        "Seasonal lawn health improvements",
+      ],
+      tags: ["Mowing", "Treatments & renovation"],
+      cta: "Enquire about lawn care",
     },
     {
-      id: "tree-hedge-care",
-      title: "Tree & hedge care",
+      id: "tree-hedge",
+      nav: "Trees & hedges",
+      title: "Tree and hedge care (including hedge planting)",
       summary:
-        "Shaping, trimming and maintenance for hedges and small to medium trees - from regular cuts to sensible reductions and tidy-ups.",
-      tags: ["Hedge trimming", "Tree pruning"],
+        "Maintenance and shaping for hedges and small to medium trees, plus new hedge planting for structure, privacy and wildlife value.",
+      includes: [
+        "Hedge trimming and shaping",
+        "Sensible reductions and tidy-ups",
+        "New hedge planting (native or evergreen mixes)",
+        "Aftercare advice for establishment",
+      ],
+      tags: ["Hedge care", "Hedge planting"],
+      cta: "Enquire about hedges/trees",
     },
     {
-      id: "design-consultations-planting-plans",
-      title: "Design consultations & planting plans",
+      id: "garden-maintenance",
+      nav: "Garden maintenance",
+      title: "Garden maintenance, renovations and clearances",
       summary:
-        "Structured design sessions online or on-site, combined with practical planting ideas and bed refresh plans for low-maintenance, good-looking borders.",
-      tags: ["Design consultation", "Planting design"],
+        "Ongoing maintenance or one-off recovery visits to bring gardens back under control, improve structure and keep everything looking sharp.",
+      includes: [
+        "Weeding and border maintenance",
+        "Seasonal cutbacks and reshaping",
+        "Overgrown garden recovery / clearances",
+        "Phased garden renovation support",
+      ],
+      tags: ["Maintenance", "Renovations & clearances"],
+      cta: "Enquire about garden maintenance",
     },
     {
-      id: "new-turf-lawn-installation",
-      title: "New turf & lawn installation",
+      id: "exterior-maintenance",
+      nav: "Exterior maintenance",
+      title: "Exterior maintenance (gutters and power washing)",
       summary:
-        "Ground preparation and laying of quality turf for new or replacement lawns, including advice on aftercare and watering.",
-      tags: ["New lawns", "Turfing"],
+        "Simple exterior maintenance that improves kerb appeal and reduces problems: clear gutters, clean surfaces and keep things safe underfoot.",
+      includes: [
+        "Gutter clearing and debris removal",
+        "Pressure washing (patios, paths, driveways)",
+        "Algae/moss removal where practical",
+        "Advice on keeping surfaces cleaner for longer",
+      ],
+      tags: ["Gutters", "Power washing"],
+      cta: "Enquire about exterior maintenance",
     },
     {
-      id: "garden-cleanups-clearances",
-      title: "Garden clean-ups & clearances",
+      id: "hard-soft-landscaping",
+      nav: "Landscaping",
+      title: "Hard and soft landscaping (including drainage solutions)",
       summary:
-        "Overgrown garden recovery, pruning, strimming, waste removal and bringing neglected spaces back to a usable state.",
-      tags: ["Garden clearance", "One-off tidy"],
-    },
-    {
-      id: "pressure-washing",
-      title: "Pressure washing",
-      summary:
-        "Cleaning of patios, paths and driveways to remove algae, moss and general grime, helping hard surfaces look brighter and reduce slip hazards.",
-      tags: ["Patios", "Driveways"],
-    },
-    {
-      id: "gutter-clearing",
-      title: "Gutter clearing",
-      summary:
-        "Safe removal of moss and debris from gutters to help prevent blockages and overflow issues.",
-      tags: ["Blockage prevention"],
-    },
-    {
-      id: "fencing",
-      title: "Fencing",
-      summary:
-        "Supply and installation of fencing, including new runs, replacements and minor repairs to panels and posts.",
-      tags: ["Panels & posts", "Boundaries"],
-    },
-    {
-      id: "decking",
-      title: "Decking",
-      summary:
-        "Design and installation of timber or composite decking to create practical seating and entertaining areas.",
-      tags: ["Outdoor seating", "Timber & composite"],
-    },
-    {
-      id: "drainage-problem-areas",
-      title: "Drainage & problem areas",
-      summary:
-        "Practical plans and works to reduce waterlogging, improve soggy or shaded lawns and make difficult areas more usable.",
-      tags: ["Waterlogged lawns", "Clay soils"],
+        "Build and improvement work: fencing, decking, paving and practical fixes for problem areas - including waterlogging and drainage plans.",
+      includes: [
+        "Fencing supply/installation and repairs",
+        "Decking (timber or composite)",
+        "Patios / paving / edging improvements",
+        "Turfing and new lawn installation",
+        "Drainage and waterlogging solutions",
+      ],
+      tags: ["Hard landscaping", "Soft landscaping"],
+      cta: "Enquire about landscaping",
     },
     {
       id: "robot-mower",
-      title: "Robot mower survey & installation",
+      nav: "Robot mowers",
+      title: "Robot mower surveys, specification and installation",
       summary:
-        "Site survey, specification and installation of robotic lawn mowers for suitable gardens, including set-up and programming.",
-      tags: ["Robot mower", "Low-effort lawns"],
-    },
-    {
-      id: "hedge-planting",
-      title: "Hedge planting",
-      summary:
-        "Supply and planting of new hedges, including native wildlife-friendly mixes and evergreen options, with advice on spacing and establishment.",
-      tags: ["New hedges", "Native planting"],
-    },
-    {
-      id: "commercial-maintenance",
-      title: "Commercial & shared-space maintenance",
-      summary:
-        "Regular visits to keep commercial and shared outdoor spaces well kept, with simple visit schedules and reporting where required.",
-      tags: ["Grounds maintenance", "Shared spaces"],
+        "A low-effort lawn option for suitable gardens. We survey, specify the right kit, install cleanly and set everything up properly.",
+      includes: [
+        "Site survey and suitability checks",
+        "Specification and boundary planning",
+        "Installation and set-up",
+        "Programming and handover guidance",
+      ],
+      tags: ["Robot mowers", "Low-effort lawns"],
+      cta: "Enquire about robot mowers",
     },
   ];
+
+  const [index, setIndex] = useState(0);
+  const active = categories[index];
+
+  const prev = () => setIndex((i) => (i === 0 ? categories.length - 1 : i - 1));
+  const next = () => setIndex((i) => (i === categories.length - 1 ? 0 : i + 1));
 
   return (
     <section>
@@ -663,82 +675,124 @@ function ServicesSection({ onBookClick }) {
           </div>
         </div>
       </div>
-{/* Accordion */}
+
+      {/* Domestic + commercial statement (reduces the need for a separate commercial tile) */}
+      <div className="mx-auto max-w-6xl px-4 pt-6">
+        <div className="rounded-2xl border border-slate-200 bg-white p-4 text-xs text-slate-700 shadow-sm">
+          <p className="font-semibold text-slate-900">Domestic and commercial clients</p>
+          <p className="mt-1 text-slate-600">
+            We work with homeowners, landlords, shared spaces and businesses across East Lancashire. If you need a regular visit schedule,
+            simple reporting, or a maintenance plan, mention it in your enquiry and we’ll recommend the best approach.
+          </p>
+        </div>
+      </div>
+
+      {/* Carousel + details */}
       <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
-        <div className="rounded-2xl border border-slate-200 bg-white shadow-sm">
-          {services.map((service, idx) => {
-            const isOpen = openServiceId === service.id;
-            return (
-              <div
-                key={service.id || service.title}
-                className={idx === 0 ? "" : "border-t border-slate-200"}
-              >
-                <button
-                  type="button"
-                  onClick={() =>
-                    setOpenServiceId((prev) =>
-                      prev === service.id ? null : service.id
-                    )
-                  }
-                  className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
-                  aria-expanded={isOpen}
-                >
-                  <div className="min-w-0">
-                    <p className="text-sm font-semibold tracking-tight text-slate-900">
-                      {service.title}
-                    </p>
-</div>
-                  <span
-                    className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-base font-semibold text-slate-700"
-                    aria-hidden="true"
-                  >
-                    {isOpen ? "-" : "+"}
-                  </span>
-                </button>
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <h2 className="text-xl font-semibold tracking-tight text-slate-900">
+              Choose a category
+            </h2>
+            <p className="mt-1 text-sm text-slate-600">
+              Use the arrows or select a category below - you’ll only see one at a time.
+            </p>
+          </div>
 
-                {isOpen && (
-                  <div className="px-5 pb-5">
-                    <p className="text-sm leading-relaxed text-slate-700">
-                      {service.summary}
-                    </p>
-
-                    {service.title === "Commercial & shared-space maintenance" && (
-                      <a
-                        href="/guides/commercial-maintenance-overview.pdf"
-                        className="mt-3 inline-flex text-xs font-semibold text-emerald-700 underline underline-offset-2"
-                        download
-                      >
-                        Download our commercial maintenance overview
-                      </a>
-                    )}
-
-                    <div className="mt-4 flex flex-wrap items-center justify-between gap-3 text-xs">
-                      <div className="flex flex-wrap gap-1.5">
-                        {service.tags?.map((tag) => (
-                          <span
-                            key={tag}
-                            className="rounded-full bg-emerald-50 px-2.5 py-1 font-medium text-emerald-700"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      <button
-                        type="button"
-                        onClick={onBookClick}
-                        className="text-xs font-semibold text-emerald-700 underline-offset-2 hover:underline"
-                      >
-                        Enquire about this
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={prev}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
+              aria-label="Previous service category"
+            >
+              ‹
+            </button>
+            <button
+              type="button"
+              onClick={next}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
+              aria-label="Next service category"
+            >
+              ›
+            </button>
+          </div>
         </div>
 
+        {/* Carousel shell */}
+        <div className="mt-6 relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div
+            className="flex transition-transform duration-300 ease-out"
+            style={{ transform: "translateX(-" + index * 100 + "%)" }}
+          >
+            {categories.map((cat) => (
+              <div key={cat.id} className="w-full shrink-0 p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
+                  {cat.nav}
+                </p>
+                <h3 className="mt-2 text-lg font-semibold tracking-tight text-slate-900">
+                  {cat.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-700">
+                  {cat.summary}
+                </p>
+
+                <div className="mt-4 grid gap-2 sm:grid-cols-2">
+                  {cat.includes.map((item) => (
+                    <div
+                      key={item}
+                      className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-700"
+                    >
+                      {item}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
+                  <div className="flex flex-wrap gap-1.5 text-xs">
+                    {cat.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-emerald-50 px-2.5 py-1 font-medium text-emerald-700"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <button
+                    type="button"
+                    onClick={onBookClick}
+                    className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-emerald-500"
+                  >
+                    {cat.cta}
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Category selector pills (clear hierarchy, quick access) */}
+        <div className="mt-4 flex flex-wrap gap-2">
+          {categories.map((cat, i) => (
+            <button
+              key={cat.id}
+              type="button"
+              onClick={() => setIndex(i)}
+              className={`rounded-full px-3 py-1.5 text-xs font-medium transition ${
+                i === index
+                  ? "bg-emerald-600 text-white shadow-sm"
+                  : "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+              }`}
+              aria-label={`Select ${cat.nav}`}
+            >
+              {cat.nav}
+            </button>
+          ))}
+        </div>
+
+        {/* Small print stays */}
         <p className="mt-6 text-[11px] text-slate-500">
           Our online estimator gives a guide price for key services. Final
           quotes are always confirmed after a quick visit or photos of your
