@@ -11,10 +11,10 @@ const CONTACT = {
 
 const NAV_ITEMS = [
   { id: "home", label: "Home" },
+  { id: "design", label: "Design" },
   { id: "services", label: "Services" },
   { id: "about", label: "About us" },
   { id: "booking", label: "Enquiry" },
-  { id: "design", label: "Design" },
   { id: "gallery", label: "Gallery" },
   { id: "hints", label: "Hints & Tips" },
 ];
@@ -26,7 +26,7 @@ const hintsTipsPosts = [
     category: "Lawn Care",
     readTime: "4 min read",
     summary:
-      "A quick checklist to get your lawn ready for the season "" without needing a full renovation.",
+      "A quick checklist to get your lawn ready for the season - without needing a full renovation.",
     bullets: [
       "When and how to do your first cut",
       "Why you should avoid scalping the lawn",
@@ -56,7 +56,7 @@ const hintsTipsPosts = [
     category: "Planting Design",
     readTime: "5 min read",
     summary:
-      "Evergreen structure that looks good year-round with minimal fuss "" ideal for family gardens.",
+      "Evergreen structure that looks good year-round with minimal fuss - ideal for family gardens.",
     bullets: [
       "How to choose shrubs that don't dominate the space",
       "Planting for year-round interest",
@@ -70,7 +70,7 @@ const hintsTipsPosts = [
     category: "Lawn Care",
     readTime: "3 min read",
     summary:
-      "Scarifying is powerful "" but overdoing it can set your lawn back. Here are some simple rules of thumb.",
+      "Scarifying is powerful - but overdoing it can set your lawn back. Here are some simple rules of thumb.",
     bullets: [
       "Signs your lawn is ready (or not ready)",
       "Best times of year in the North West",
@@ -167,7 +167,7 @@ function getMarketAdjustment(position) {
   return 0;
 }
 
-// Lawn price estimator "" linear 0.38 £/m² core logic
+// Lawn price estimator - linear 0.38 £/m² core logic
 function estimateLawnPrice({
   areaSqm,
   condition = "maintained",
@@ -310,7 +310,7 @@ function estimateHedgePrice({ lengthM, heightM, width = "maintained" }) {
 function trackTabView(tabId) {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", "page_view", {
-      page_title: `Henderson "" ${tabId}`,
+      page_title: `Henderson - ${tabId}`,
       page_location: window.location.href,
       page_path: `/${tabId}`,
     });
@@ -318,7 +318,7 @@ function trackTabView(tabId) {
 }
 
 /**
- * GALLERY "" define images explicitly so mobile doesn't "only load a few"
+ * GALLERY - define images explicitly so mobile doesn't "only load a few"
  * (and so you don't depend on preload timing / bandwidth).
  */
 const GALLERY_IMAGE_COUNT = 24;
@@ -456,7 +456,7 @@ function Header({ activeTab, onTabChange }) {
 }
 
 /**
- * HOME "" full-banner hero image (background), text on the left
+ * HOME - full-banner hero image (background), text on the left
  */
 function HomeSection({ onBookClick }) {
   return (
@@ -541,7 +541,7 @@ function ServicesSection({ onBookClick }) {
     {
       title: "Mowing, lawn care & renovation",
       summary:
-        "Regular mowing, edging, lawn treatments and renovation work such as scarifying, aeration and overseeding "" all tailored to your lawn and how you use the space.",
+        "Regular mowing, edging, lawn treatments and renovation work such as scarifying, aeration and overseeding - all tailored to your lawn and how you use the space.",
       tags: ["Regular cuts", "Scarifying & aeration"],
     },
     {
@@ -553,7 +553,7 @@ function ServicesSection({ onBookClick }) {
     {
       title: "Tree & hedge care",
       summary:
-        "Shaping, trimming and maintenance for hedges and small to medium trees "" from regular cuts to sensible reductions and tidy-ups.",
+        "Shaping, trimming and maintenance for hedges and small to medium trees - from regular cuts to sensible reductions and tidy-ups.",
       tags: ["Hedge trimming", "Tree pruning"],
     },
     {
@@ -631,7 +631,7 @@ function ServicesSection({ onBookClick }) {
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <img
             src="/images/gallery-1.jpg"
-            alt="Striped lawn and neat borders "" example of our lawn and garden care work"
+            alt="Striped lawn and neat borders - example of our lawn and garden care work"
             className="h-full w-full object-cover opacity-40"
             decoding="async"
           />
@@ -721,7 +721,7 @@ function ServicesSection({ onBookClick }) {
           garden.
         </p>
         <p className="mt-2 text-[11px] text-slate-500">
-          Don&apos;t see a service you need? Please ask "" we aim to be a
+          Don&apos;t see a service you need? Please ask - we aim to be a
           one-stop shop for all external hard and soft landscaping
           requirements. If we can&apos;t quote directly, we&apos;ll usually be
           able to point you in the right place.
@@ -737,7 +737,7 @@ function ServicesSection({ onBookClick }) {
 function AboutSection() {
   return (
     <section>
-      {/* Page hero with faded image "â€œ consistent size with other internal pages */}
+      {/* Page hero with faded image - consistent size with other internal pages */}
       <div className="relative border-b border-slate-200 bg-slate-950 text-white">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <img
@@ -753,10 +753,10 @@ function AboutSection() {
               About us
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
-              About Henderson Landscaping Services
+              Henderson Landscaping Services
             </h1>
             <p className="mt-3 text-sm leading-relaxed text-emerald-100">
-              Reliable, premium garden care, practical problem-solving and considered design across East Lancashire.
+              Reliable, premium garden care and design across East Lancashire.
             </p>
           </div>
         </div>
@@ -770,34 +770,36 @@ function AboutSection() {
               Who we are
             </p>
 
-            <div className="mt-4 w-full max-w-sm overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 p-1 lg:float-right lg:ml-6 lg:mb-4">
-              <img
-                src="/images/owner.jpg"
-                alt="Joel Henderson, owner of Henderson Landscaping Services"
-                className="h-full w-full max-h-[360px] object-cover"
-                decoding="async"
-                loading="lazy"
-              />
+            <div className="mt-4 grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
+              <div className="space-y-3">
+                <p className="mt-3">
+                  Henderson Landscaping Services was established to provide homeowners and businesses with a reliable,
+                  considered alternative to rushed maintenance and unclear pricing. We deliver high-quality lawn care,
+                  hedge management, practical planting and effective problem-solving, supported by clear communication
+                  and a consistent, professional service.
+                </p>
+
+                <p className="mt-3">
+                  We support a long-standing portfolio of domestic and commercial clients across East Lancashire, maintaining
+                  everything from small front gardens to shared spaces and courtyards that must remain tidy, safe and presentable
+                  throughout the year.
+                </p>
+              </div>
+
+              <div className="w-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 p-1">
+                <img
+                  src="/images/owner.jpg"
+                  alt="Joel Henderson, owner of Henderson Landscaping Services"
+                  className="w-full aspect-[4/5] object-cover"
+                  decoding="async"
+                  loading="lazy"
+                />
+              </div>
             </div>
-
-            <p className="mt-3">
-              Henderson Landscaping Services was established to provide homeowners and businesses with a reliable,
-              considered alternative to rushed maintenance and unclear pricing. We deliver high-quality lawn care,
-              hedge management, practical planting and effective problem-solving, supported by clear communication
-              and a consistent, professional service.
-            </p>
-
-            <p className="mt-3">
-              We support a long-standing portfolio of domestic and commercial clients across East Lancashire, maintaining
-              everything from small front gardens to shared spaces and courtyards that must remain tidy, safe and presentable
-              throughout the year.
-            </p>
-
-            <div className="clear-both" />
           </div>
         </div>
 
-        {/* Main about copy "â€œ centred block, plus sustainability box */}
+        {/* Main about copy - centred block, plus sustainability box */}
         <div className="mx-auto mt-10 max-w-3xl space-y-4 text-sm leading-relaxed text-slate-700">
           <p>
             After years working for local gardening companies and the council, I decided it was time to start my own
@@ -886,7 +888,7 @@ function DesignSection({ onEnquireClick }) {
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <img
             src="/images/gallery-3.jpg"
-            alt="Garden design and planting "" example of a structured border and seating area"
+            alt="Garden design and planting - example of a structured border and seating area"
             className="h-full w-full object-cover opacity-40"
             decoding="async"
           />
@@ -951,11 +953,11 @@ function DesignSection({ onEnquireClick }) {
  * FIX: send to /api/enquiry (Cloudflare Pages Function) so it lands in email.
  */
 function BookingSection() {
-  const [status, setStatus] = useState({ type: "idle", message: "" });
+  const [status, setStatus] = useState({ type: "idle", message: - });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setStatus({ type: "sending", message: "Sending your enquiry"¦" });
+    setStatus({ type: "sending", message: "Sending your enquiry..." });
 
     const form = event.currentTarget;
     const fd = new FormData(form);
@@ -970,7 +972,7 @@ function BookingSection() {
 
       setStatus({
         type: "success",
-        message: "Thanks "" your enquiry has been received.",
+        message: "Thanks - your enquiry has been received.",
       });
       form.reset();
       return;
@@ -1008,14 +1010,14 @@ function BookingSection() {
       setStatus({
         type: "success",
         message:
-          "Thank you "" your enquiry has been sent. We'll be in touch shortly.",
+          "Thank you - your enquiry has been sent. We'll be in touch shortly.",
       });
       form.reset();
     } catch (err) {
       setStatus({
         type: "error",
         message:
-          "Sorry "" something went wrong sending your enquiry. Please try again, or contact us directly using the phone/email below.",
+          "Sorry - something went wrong sending your enquiry. Please try again, or contact us directly using the phone/email below.",
       });
     }
   };
@@ -1027,7 +1029,7 @@ function BookingSection() {
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <img
             src="/images/gallery-4.jpg"
-            alt="Garden pathway and planting "" welcoming front garden example"
+            alt="Garden pathway and planting - welcoming front garden example"
             className="h-full w-full object-cover opacity-40"
             decoding="async"
           />
@@ -1225,7 +1227,7 @@ function BookingSection() {
               placeholder="Link to shared folder (Google Drive, Dropbox, etc.), or mention you'll email photos."
             />
             <p className="mt-1 text-[11px] text-slate-500">
-              Ideally 4""8 clear photos and, if possible, a simple plan or rough
+              Ideally 4-8 clear photos and, if possible, a simple plan or rough
               sketch of your garden. This is especially helpful for online
               design consultations.
             </p>
@@ -1245,7 +1247,7 @@ function BookingSection() {
                   : "bg-emerald-600 hover:bg-emerald-500"
               }`}
             >
-              {status.type === "sending" ? "Sending"¦" : "Send enquiry"}
+              {status.type === "sending" ? "Sending..." : "Send enquiry"}
             </button>
           </div>
         </form>
@@ -1384,7 +1386,7 @@ function GallerySection() {
             className="absolute left-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-slate-900/70 text-xs font-semibold text-white shadow hover:bg-slate-900/90"
             aria-label="Previous image"
           >
-            "¹
+            &lt;
           </button>
           <button
             type="button"
@@ -1394,7 +1396,7 @@ function GallerySection() {
             className="absolute right-3 top-1/2 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-slate-900/70 text-xs font-semibold text-white shadow hover:bg-slate-900/90"
             aria-label="Next image"
           >
-            "º
+            &gt;
           </button>
 
           {/* Dots (scrollable so they don't wrap awkwardly on mobile) */}
@@ -1450,7 +1452,7 @@ function HintsTipsSection() {
         <div className="w-full max-w-2xl rounded-2xl border border-emerald-100 bg-emerald-50/60 p-4 text-xs text-slate-800">
           <p className="font-medium text-emerald-900">How to use this page</p>
           <p className="mt-2 text-slate-700">
-            We keep this section updated with seasonal advice, common problems we see in local gardens, and simple checklists you can follow yourself â€”
+            We keep this section updated with seasonal advice, common problems we see in local gardens, and simple checklists you can follow yourself -
             or use as a starting point for a professional visit.
           </p>
         </div>
@@ -1564,7 +1566,7 @@ function HintsTipsSection() {
               <span>
                 <span className="font-semibold">Winter pruning basics</span>
                 <br />
-                What you can safely prune "" and what to leave.
+                What you can safely prune - and what to leave.
               </span>
             </a>
             <a
@@ -1677,7 +1679,7 @@ function EstimatorPanel({ onClose, onGoToBooking }) {
     return (
       <div className="space-y-2">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
-          Guide price "" {titleMap[resultService]}
+          Guide price - {titleMap[resultService]}
         </p>
         <p className="text-lg font-semibold text-slate-900">
           £{result.total.toFixed(0)}
@@ -1864,8 +1866,8 @@ function EstimatorPanel({ onClose, onGoToBooking }) {
                   className="mt-1 w-full rounded-lg border border-slate-200 bg-slate-50 px-2 py-1.5 text-xs text-slate-900 outline-none focus:bg-white focus:ring-2 focus:ring-emerald-500/60"
                 >
                   <option value="small">Small (up to ~50m²)</option>
-                  <option value="medium">Medium (~50""150m²)</option>
-                  <option value="large">Large (~150""300m²)</option>
+                  <option value="medium">Medium (~50-150m²)</option>
+                  <option value="large">Large (~150-300m²)</option>
                   <option value="xl">XL (300m²+)</option>
                 </select>
               </div>
@@ -2080,7 +2082,7 @@ function Footer() {
             Premium garden care · North West
           </p>
 
-          {/* Instagram "" real profile */}
+          {/* Instagram - real profile */}
           <a
             href="https://www.instagram.com/hendersonlandscapingservices/"
             target="_blank"
@@ -2102,7 +2104,7 @@ function Footer() {
             </svg>
           </a>
 
-          {/* Facebook "" real page */}
+          {/* Facebook - real page */}
           <a
             href="https://www.facebook.com/p/Henderson-Landscaping-Services-100094012471732/"
             target="_blank"
