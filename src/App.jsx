@@ -539,84 +539,98 @@ function HomeSection({ onBookClick }) {
 function ServicesSection({ onBookClick }) {
   const services = [
     {
+      id: "mowing-lawn-care",
       title: "Mowing, lawn care & renovation",
       summary:
         "Regular mowing, edging, lawn treatments and renovation work such as scarifying, aeration and overseeding - all tailored to your lawn and how you use the space.",
       tags: ["Regular cuts", "Scarifying & aeration"],
     },
     {
+      id: "garden-care-renovation",
       title: "Garden care & renovation",
       summary:
         "Ongoing or one-off garden care, including weeding, border maintenance, reshaping beds and phased tidy-ups to bring tired gardens back under control.",
       tags: ["Weeding & borders", "Garden renovation"],
     },
     {
+      id: "tree-hedge-care",
       title: "Tree & hedge care",
       summary:
         "Shaping, trimming and maintenance for hedges and small to medium trees - from regular cuts to sensible reductions and tidy-ups.",
       tags: ["Hedge trimming", "Tree pruning"],
     },
     {
+      id: "design-consultations-planting-plans",
       title: "Design consultations & planting plans",
       summary:
         "Structured design sessions online or on-site, combined with practical planting ideas and bed refresh plans for low-maintenance, good-looking borders.",
       tags: ["Design consultation", "Planting design"],
     },
     {
+      id: "new-turf-lawn-installation",
       title: "New turf & lawn installation",
       summary:
         "Ground preparation and laying of quality turf for new or replacement lawns, including advice on aftercare and watering.",
       tags: ["New lawns", "Turfing"],
     },
     {
+      id: "garden-cleanups-clearances",
       title: "Garden clean-ups & clearances",
       summary:
         "Overgrown garden recovery, pruning, strimming, waste removal and bringing neglected spaces back to a usable state.",
       tags: ["Garden clearance", "One-off tidy"],
     },
     {
+      id: "pressure-washing",
       title: "Pressure washing",
       summary:
         "Cleaning of patios, paths and driveways to remove algae, moss and general grime, helping hard surfaces look brighter and reduce slip hazards.",
       tags: ["Patios", "Driveways"],
     },
     {
+      id: "gutter-clearing",
       title: "Gutter clearing",
       summary:
         "Safe removal of moss and debris from gutters to help prevent blockages and overflow issues.",
       tags: ["Blockage prevention"],
     },
     {
+      id: "fencing",
       title: "Fencing",
       summary:
         "Supply and installation of fencing, including new runs, replacements and minor repairs to panels and posts.",
       tags: ["Panels & posts", "Boundaries"],
     },
     {
+      id: "decking",
       title: "Decking",
       summary:
         "Design and installation of timber or composite decking to create practical seating and entertaining areas.",
       tags: ["Outdoor seating", "Timber & composite"],
     },
     {
+      id: "drainage-problem-areas",
       title: "Drainage & problem areas",
       summary:
         "Practical plans and works to reduce waterlogging, improve soggy or shaded lawns and make difficult areas more usable.",
       tags: ["Waterlogged lawns", "Clay soils"],
     },
     {
+      id: "robot-mower",
       title: "Robot mower survey & installation",
       summary:
         "Site survey, specification and installation of robotic lawn mowers for suitable gardens, including set-up and programming.",
       tags: ["Robot mower", "Low-effort lawns"],
     },
     {
+      id: "hedge-planting",
       title: "Hedge planting",
       summary:
         "Supply and planting of new hedges, including native wildlife-friendly mixes and evergreen options, with advice on spacing and establishment.",
       tags: ["New hedges", "Native planting"],
     },
     {
+      id: "commercial-maintenance",
       title: "Commercial & shared-space maintenance",
       summary:
         "Regular visits to keep commercial and shared outdoor spaces well kept, with simple visit schedules and reporting where required.",
@@ -649,22 +663,36 @@ function ServicesSection({ onBookClick }) {
       </div>
 
             {/* Services quick actions (moved out of hero for consistent hero height) */}
-      <div className="mx-auto max-w-6xl px-4 pb-6">
-        <div className="rounded-2xl border border-slate-200 bg-white p-4 text-xs text-slate-700 shadow-sm">
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div>
-              <p className="font-semibold text-slate-900">Want a quick quote?</p>
-              <p className="mt-1 text-slate-600">
-                Tell us a bit about your garden and we will recommend the most suitable package or combination of services.
-              </p>
-            </div>
-            <button
-              type="button"
-              onClick={onBookClick}
-              className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-2 text-xs font-semibold text-white shadow-sm hover:bg-emerald-500"
+            {/* Service selector (jump to a service) */}
+      <div className="mx-auto max-w-6xl px-4 pt-6">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-sm font-semibold text-slate-900">Choose a service</p>
+            <p className="mt-1 text-xs text-slate-600">
+              Select a service to jump to the relevant details below.
+            </p>
+          </div>
+
+          <div className="w-full sm:w-[360px]">
+            <label htmlFor="serviceJump" className="sr-only">Choose a service</label>
+            <select
+              id="serviceJump"
+              defaultValue=""
+              onChange={(e) => {
+                const id = e.target.value;
+                if (!id) return;
+                const el = document.getElementById(id);
+                el?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+              className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none ring-emerald-500/40 focus:ring-2"
             >
-              Request a quote
-            </button>
+              <option value="">Select a service…</option>
+              {services.map((s) => (
+                <option key={s.id} value={s.id}>
+                  {s.title}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
       </div>
@@ -674,7 +702,8 @@ function ServicesSection({ onBookClick }) {
           {services.map((service) => (
             <article
               key={service.title}
-              className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+              id={service.id}
+              className="scroll-mt-28 flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
             >
               <div>
                 <h3 className="text-base font-semibold tracking-tight text-slate-900">
@@ -765,36 +794,34 @@ function AboutSection() {
       {/* Owner + intro (with wrapped image on desktop) */}
       <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <div className="text-sm leading-relaxed text-slate-700">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
-              Who we are
-            </p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
+            Who we are
+          </p>
 
-            <div className="mt-4 grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
-              <div className="space-y-3">
-                <p className="mt-3">
-                  Henderson Landscaping Services was established to provide homeowners and businesses with a reliable,
-                  considered alternative to rushed maintenance and unclear pricing. We deliver high-quality lawn care,
-                  hedge management, practical planting and effective problem-solving, supported by clear communication
-                  and a consistent, professional service.
-                </p>
+          <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-start">
+            <div className="order-2 flex-1 space-y-3 text-sm leading-relaxed text-slate-700 lg:order-1">
+              <p>
+                Henderson Landscaping Services was established to provide homeowners and businesses with a reliable,
+                considered alternative to rushed maintenance and unclear pricing. We deliver high-quality lawn care,
+                hedge management, practical planting and effective problem-solving, supported by clear communication
+                and a consistent, professional service.
+              </p>
 
-                <p className="mt-3">
-                  We support a long-standing portfolio of domestic and commercial clients across East Lancashire, maintaining
-                  everything from small front gardens to shared spaces and courtyards that must remain tidy, safe and presentable
-                  throughout the year.
-                </p>
-              </div>
+              <p>
+                We support a long-standing portfolio of domestic and commercial clients across East Lancashire, maintaining
+                everything from small front gardens to shared spaces and courtyards that must remain tidy, safe and presentable
+                throughout the year.
+              </p>
+            </div>
 
-              <div className="w-full overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 p-1">
-                <img
-                  src="/images/owner.jpg"
-                  alt="Joel Henderson, owner of Henderson Landscaping Services"
-                  className="w-full aspect-[4/5] object-cover"
-                  decoding="async"
-                  loading="lazy"
-                />
-              </div>
+            <div className="order-1 w-full max-w-sm overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 p-1 lg:order-2 lg:max-w-[300px]">
+              <img
+                src="/images/owner.jpg"
+                alt="Joel Henderson, owner of Henderson Landscaping Services"
+                className="w-full max-h-[320px] object-cover"
+                decoding="async"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
