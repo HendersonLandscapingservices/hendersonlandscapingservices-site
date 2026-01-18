@@ -537,6 +537,8 @@ function HomeSection({ onBookClick }) {
  * SERVICES
  */
 function ServicesSection({ onBookClick }) {
+  const [serviceView, setServiceView] = useState("all");
+
   const services = [
     {
       id: "mowing-lawn-care",
@@ -638,6 +640,8 @@ function ServicesSection({ onBookClick }) {
     },
   ];
 
+  const visibleServices = serviceView === "all" ? services : services.filter((s) => s.id === serviceView);
+
   return (
     <section>
       {/* Page hero with faded image */}
@@ -652,7 +656,7 @@ function ServicesSection({ onBookClick }) {
         </div>
         <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:flex-row lg:items-center lg:justify-between lg:py-12">
           <div className="max-w-xl">
-            <h1 className="text-3xl font-semibold tracking-tight text-emerald-100 sm:text-4xl">
+            <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Services
             </h1>
             <p className="mt-2 text-xs font-medium uppercase tracking-[0.18em] text-emerald-300">
@@ -663,30 +667,25 @@ function ServicesSection({ onBookClick }) {
       </div>
 
             {/* Services quick actions (moved out of hero for consistent hero height) */}
-            {/* Service selector (jump to a service) */}
+                  {/* Service selector (filter view) */}
       <div className="mx-auto max-w-6xl px-4 pt-6">
-        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-semibold text-slate-900">Choose a service</p>
+            <p className="text-sm font-semibold text-slate-900">Services</p>
             <p className="mt-1 text-xs text-slate-600">
-              Select a service to jump to the relevant details below.
+              Select a service to view the details - or choose "Show all services".
             </p>
           </div>
 
-          <div className="w-full sm:w-[360px]">
-            <label htmlFor="serviceJump" className="sr-only">Choose a service</label>
+          <div className="w-full sm:w-[380px]">
+            <label htmlFor="serviceView" className="sr-only">Select a service</label>
             <select
-              id="serviceJump"
-              defaultValue=""
-              onChange={(e) => {
-                const id = e.target.value;
-                if (!id) return;
-                const el = document.getElementById(id);
-                el?.scrollIntoView({ behavior: "smooth", block: "start" });
-              }}
+              id="serviceView"
+              value={serviceView}
+              onChange={(e) => setServiceView(e.target.value)}
               className="mt-1 w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none ring-emerald-500/40 focus:ring-2"
             >
-              <option value="">Select a service…</option>
+              <option value="all">Show all services</option>
               {services.map((s) => (
                 <option key={s.id} value={s.id}>
                   {s.title}
@@ -695,11 +694,23 @@ function ServicesSection({ onBookClick }) {
             </select>
           </div>
         </div>
+
+        {serviceView !== "all" && (
+          <div className="mt-3">
+            <button
+              type="button"
+              onClick={() => setServiceView("all")}
+              className="text-xs font-semibold text-emerald-700 underline-offset-2 hover:underline"
+            >
+              Show all services
+            </button>
+          </div>
+        )}
       </div>
-      {/* Service tiles */}
+
       <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
         <div className="grid gap-6 md:grid-cols-2">
-          {services.map((service) => (
+          {visibleServices.map((service) => (
             <article
               key={service.title}
               id={service.id}
@@ -907,6 +918,8 @@ function DesignSection({ onEnquireClick }) {
       hasChecklist: false,
     },
   ];
+
+  const visibleServices = serviceView === "all" ? services : services.filter((s) => s.id === serviceView);
 
   return (
     <section>
@@ -2051,6 +2064,8 @@ function TestimonialsSection() {
       name: "Nina, Burnley",
     },
   ];
+
+  const visibleServices = serviceView === "all" ? services : services.filter((s) => s.id === serviceView);
 
   return (
     <section className="border-t border-slate-200 bg-slate-50">
