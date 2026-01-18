@@ -535,8 +535,10 @@ function HomeSection({ onBookClick }) {
         </div>
       </section>
 
-      <TestimonialsSection />
-    </>
+      <div className="mt-10">
+        <TestimonialsSection />
+      </div>
+</>
   );
 }
 
@@ -2098,7 +2100,7 @@ function TestimonialsSection() {
   return (
     <section className="border-t border-slate-200 bg-slate-50">
       <div className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
-        <h2 className="text-xl font-semibold tracking-tight text-slate-900">
+        <h2 className="text-xl font-semibold tracking-tight text-slate-900 text-center">
           What our customers say
         </h2>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
