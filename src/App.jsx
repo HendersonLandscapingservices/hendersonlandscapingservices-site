@@ -553,7 +553,7 @@ function ServicesSection({ onBookClick }) {
       nav: "Lawn care",
       title: "Lawn care (mowing, treatments & renovation)",
       summary:
-        "Everything lawn-related in one place: regular mowing, edging and seasonal improvement work, plus renovation when the lawn needs a reset.",
+        "Everything lawn-related in one place: regular mowing, edging and seasonal improvement work.",
       includes: [
         "Regular mowing and edging",
         "Scarifying and aeration",
@@ -588,7 +588,7 @@ function ServicesSection({ onBookClick }) {
         "Weeding and border maintenance",
         "Seasonal cutbacks and reshaping",
         "Overgrown garden recovery / clearances",
-        "Phased renovation support",
+        "Phased renovations",
       ],
       tags: ["Maintenance", "Clearances"],
       cta: "Enquire about garden maintenance",
@@ -602,9 +602,7 @@ function ServicesSection({ onBookClick }) {
       includes: [
         "Gutter clearing and debris removal",
         "Pressure washing (patios, paths, driveways)",
-        "Algae/moss removal where practical",
-        "Advice on keeping surfaces cleaner",
-      ],
+],
       tags: ["Gutters", "Power washing"],
       cta: "Enquire about exterior maintenance",
     },
@@ -613,7 +611,7 @@ function ServicesSection({ onBookClick }) {
       nav: "Landscaping",
       title: "Hard and soft landscaping (including drainage solutions)",
       summary:
-        "Build and improvement work: fencing, decking, paving and practical fixes for problem areas, including waterlogging and drainage plans.",
+        "Fencing, decking, paving and improvements, and troubleshooting for waterlogging/poor drainage.",
       includes: [
         "Fencing supply/installation and repairs",
         "Decking (timber or composite)",
@@ -779,7 +777,7 @@ function ServicesSection({ onBookClick }) {
         </p>
         <p className="mt-2 text-sm text-slate-600">
           Don&apos;t see a service you need? Please ask - we aim to be a one-stop shop for all external hard and soft landscaping requirements.
-          If we can&apos;t quote directly, we&apos;ll usually be able to point you in the right place.
+          If we can&apos;t quote directly, we&apos;ll usually be able to point you in the right direction.
         </p>
       </div>
     </section>
@@ -807,7 +805,7 @@ function AboutSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
               About us
             </p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Henderson Landscaping Services
             </h1>
             <p className="mt-3 text-sm leading-relaxed text-emerald-100">
@@ -947,7 +945,7 @@ function DesignSection({ onEnquireClick }) {
         </div>
         <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:flex-row lg:items-center lg:justify-between lg:py-12">
           <div className="max-w-xl">
-            <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Design
             </h1>
             <p className="mt-2 text-sm text-emerald-100/90">
@@ -1091,7 +1089,7 @@ function BookingSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-200">
               Enquiry
             </p>
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Send an enquiry or request a quote
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-emerald-100">
@@ -1405,7 +1403,7 @@ function GallerySection() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
               Gallery
             </p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Recent work
             </h1>
             <p className="mt-4 text-sm leading-relaxed text-emerald-100">
@@ -1492,7 +1490,7 @@ function HintsTipsSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200">
               Hints &amp; Tips
             </p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
+            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Practical advice for Northern homes
             </h1>
           </div>
@@ -1501,8 +1499,8 @@ function HintsTipsSection() {
 
             {/* How to use this page (moved out of hero for consistent hero height) */}
       <div className="mx-auto max-w-6xl px-4 pt-6">
-        <div className="w-full max-w-2xl rounded-2xl border border-emerald-100 bg-emerald-50/60 p-4 text-xs text-slate-800">
-          <p className="font-medium text-emerald-900">How to use this page</p>
+        <div className="w-full max-w-2xl rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5 text-sm text-slate-800">
+          <p className="text-base font-semibold text-emerald-900">How to use this page</p>
           <p className="mt-2 text-slate-700">
             We keep this section updated with seasonal advice, common problems we see in local gardens, and simple checklists you can follow yourself -
             or use as a starting point for a professional visit.
@@ -1536,10 +1534,7 @@ function HintsTipsSection() {
                 <h3 className="mt-2 text-base font-semibold tracking-tight text-slate-900">
                   {post.title}
                 </h3>
-                <p className="mt-1 text-xs text-slate-500">
-                  {post.published} · {post.readTime}
-                </p>
-              </header>
+</header>
 
               <p className="mt-3 text-sm leading-relaxed text-slate-700">
                 {post.summary}
@@ -1659,7 +1654,7 @@ function WhatsAppWidget() {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="fixed bottom-4 right-4 z-40 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/30 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+      className="fixed bottom-16 left-1/2 z-40 inline-flex -translate-x-1/2 transform items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/30 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
       aria-label="Chat on WhatsApp"
       title="Chat on WhatsApp"
     >
@@ -2141,7 +2136,7 @@ function Footer() {
 
   return (
     <footer data-build-id="build-20260117-202214" className="border-t border-slate-200 bg-white">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-[11px] text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
         {/* Left: qualifications + copyright */}
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-2">
@@ -2160,7 +2155,7 @@ function Footer() {
 
         {/* Right: tagline + social icons tight together */}
         <div className="flex items-center gap-3 sm:ml-auto sm:justify-end">
-          <p className="whitespace-nowrap text-[11px]">
+          <p className="whitespace-nowrap text-xs">
             Premium garden care · North West
           </p>
 
@@ -2169,13 +2164,13 @@ function Footer() {
             href="https://www.instagram.com/hendersonlandscapingservices/"
             target="_blank"
             rel="noreferrer"
-            className="flex h-6 w-6 items-center justify-center rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-50"
+            className="flex h-7 w-7 items-center justify-center rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-50"
             aria-label="Instagram"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              className="h-3.5 w-3.5"
+              className="h-4 w-4"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
@@ -2191,13 +2186,13 @@ function Footer() {
             href="https://www.facebook.com/p/Henderson-Landscaping-Services-100094012471732/"
             target="_blank"
             rel="noreferrer"
-            className="flex h-6 w-6 items-center justify-center rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-50"
+            className="flex h-7 w-7 items-center justify-center rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-50"
             aria-label="Facebook"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              className="h-3.5 w-3.5"
+              className="h-4 w-4"
               fill="currentColor"
             >
               <path d="M13 21v-7h2.5a1 1 0 0 0 .98-.8l.5-3A1 1 0 0 0 16 9h-3V7.5A1.5 1.5 0 0 1 14.5 6H17a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-2.5A4.5 4.5 0 0 0 10 7.5V9H8a1 1 0 0 0-1 .9l-.5 3A1 1 0 0 0 7.5 14H10v7h3z" />
