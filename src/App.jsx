@@ -11,6 +11,8 @@ const CONTACT = {
 
 
 
+
+
 const WHATSAPP = {
   phoneIntl: "447766645221",
   message: "Hi Joel - I'd like a quote please. My postcode is ____ and I'm looking for help with ____.",
@@ -365,8 +367,7 @@ function App() {
         {activeTab === "hints" && <HintsTipsSection />}
       </main>
 
-      <Footer />
-
+      <Footer />
 
       <WhatsAppWidget />
 
@@ -556,10 +557,10 @@ function ServicesSection({ onBookClick }) {
       includes: [
         "Regular mowing and edging",
         "Scarifying and aeration",
-        "Overseeding and top-dressing guidance",
+        "Overseeding and improvement work",
         "Seasonal lawn health improvements",
       ],
-      tags: ["Mowing", "Treatments & renovation"],
+      tags: ["Mowing", "Lawn renovation"],
       cta: "Enquire about lawn care",
     },
     {
@@ -571,7 +572,7 @@ function ServicesSection({ onBookClick }) {
       includes: [
         "Hedge trimming and shaping",
         "Sensible reductions and tidy-ups",
-        "New hedge planting (native or evergreen mixes)",
+        "New hedge planting (native or evergreen)",
         "Aftercare advice for establishment",
       ],
       tags: ["Hedge care", "Hedge planting"],
@@ -587,9 +588,9 @@ function ServicesSection({ onBookClick }) {
         "Weeding and border maintenance",
         "Seasonal cutbacks and reshaping",
         "Overgrown garden recovery / clearances",
-        "Phased garden renovation support",
+        "Phased renovation support",
       ],
-      tags: ["Maintenance", "Renovations & clearances"],
+      tags: ["Maintenance", "Clearances"],
       cta: "Enquire about garden maintenance",
     },
     {
@@ -597,27 +598,26 @@ function ServicesSection({ onBookClick }) {
       nav: "Exterior maintenance",
       title: "Exterior maintenance (gutters and power washing)",
       summary:
-        "Simple exterior maintenance that improves kerb appeal and reduces problems: clear gutters, clean surfaces and keep things safe underfoot.",
+        "Simple exterior maintenance that improves kerb appeal and reduces problems: clear gutters, clean surfaces and keep things safer underfoot.",
       includes: [
         "Gutter clearing and debris removal",
         "Pressure washing (patios, paths, driveways)",
         "Algae/moss removal where practical",
-        "Advice on keeping surfaces cleaner for longer",
+        "Advice on keeping surfaces cleaner",
       ],
       tags: ["Gutters", "Power washing"],
       cta: "Enquire about exterior maintenance",
     },
     {
-      id: "hard-soft-landscaping",
+      id: "landscaping",
       nav: "Landscaping",
       title: "Hard and soft landscaping (including drainage solutions)",
       summary:
-        "Build and improvement work: fencing, decking, paving and practical fixes for problem areas - including waterlogging and drainage plans.",
+        "Build and improvement work: fencing, decking, paving and practical fixes for problem areas, including waterlogging and drainage plans.",
       includes: [
         "Fencing supply/installation and repairs",
         "Decking (timber or composite)",
         "Patios / paving / edging improvements",
-        "Turfing and new lawn installation",
         "Drainage and waterlogging solutions",
       ],
       tags: ["Hard landscaping", "Soft landscaping"],
@@ -632,7 +632,7 @@ function ServicesSection({ onBookClick }) {
       includes: [
         "Site survey and suitability checks",
         "Specification and boundary planning",
-        "Installation and set-up",
+        "Installation and setup",
         "Programming and handover guidance",
       ],
       tags: ["Robot mowers", "Low-effort lawns"],
@@ -641,8 +641,6 @@ function ServicesSection({ onBookClick }) {
   ];
 
   const [index, setIndex] = useState(0);
-  const active = categories[index];
-
   const prev = () => setIndex((i) => (i === 0 ? categories.length - 1 : i - 1));
   const next = () => setIndex((i) => (i === categories.length - 1 ? 0 : i + 1));
 
@@ -670,7 +668,7 @@ function ServicesSection({ onBookClick }) {
         </div>
       </div>
 
-      {/* Domestic + commercial statement (reduces the need for a separate commercial tile) */}
+      {/* Domestic + commercial strip (bigger, short) */}
       <div className="mx-auto max-w-6xl px-4 pt-6">
         <div className="rounded-2xl border border-slate-200 bg-white p-5 text-sm text-slate-700 shadow-sm">
           <p className="text-base font-semibold text-slate-900">Domestic and commercial clients</p>
@@ -682,28 +680,28 @@ function ServicesSection({ onBookClick }) {
 
       {/* Carousel + details */}
       <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
+        {/* Arrows only (no extra headings) */}
         <div className="flex items-center justify-end gap-2">
-            <button
-              type="button"
-              onClick={prev}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
-              aria-label="Previous service category"
-            >
-              ‹
-            </button>
-            <button
-              type="button"
-              onClick={next}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
-              aria-label="Next service category"
-            >
-              ›
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={prev}
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
+            aria-label="Previous service category"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            onClick={next}
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-sm font-semibold text-slate-700 shadow-sm hover:bg-slate-50"
+            aria-label="Next service category"
+          >
+            ›
+          </button>
         </div>
 
         {/* Carousel shell */}
-        <div className="mt-6 relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <div className="mt-4 relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div
             className="flex transition-transform duration-300 ease-out"
             style={{ transform: "translateX(-" + index * 100 + "%)" }}
@@ -756,7 +754,7 @@ function ServicesSection({ onBookClick }) {
           </div>
         </div>
 
-        {/* Category selector pills (clear hierarchy, quick access) */}
+        {/* Selector pills */}
         <div className="mt-4 flex flex-wrap gap-2">
           {categories.map((cat, i) => (
             <button
@@ -775,17 +773,13 @@ function ServicesSection({ onBookClick }) {
           ))}
         </div>
 
-        {/* Small print stays */}
+        {/* Bigger footer copy */}
         <p className="mt-6 text-sm text-slate-600">
-          Our online estimator gives a guide price for key services. Final
-          quotes are always confirmed after a quick visit or photos of your
-          garden.
+          Our online estimator gives a guide price for key services. Final quotes are always confirmed after a quick visit or photos of your garden.
         </p>
         <p className="mt-2 text-sm text-slate-600">
-          Don&apos;t see a service you need? Please ask - we aim to be a
-          one-stop shop for all external hard and soft landscaping
-          requirements. If we can&apos;t quote directly, we&apos;ll usually be
-          able to point you in the right place.
+          Don&apos;t see a service you need? Please ask - we aim to be a one-stop shop for all external hard and soft landscaping requirements.
+          If we can&apos;t quote directly, we&apos;ll usually be able to point you in the right place.
         </p>
       </div>
     </section>
@@ -1649,6 +1643,7 @@ function HintsTipsSection() {
 }
 
 
+
 /**
  * WHATSAPP WIDGET (floating)
  */
@@ -1669,13 +1664,7 @@ function WhatsAppWidget() {
       title="Chat on WhatsApp"
     >
       <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/10">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 32 32"
-          className="h-4 w-4"
-          fill="currentColor"
-          aria-hidden="true"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-4 w-4" fill="currentColor" aria-hidden="true">
           <path d="M19.11 17.45c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.21-.59.07-.27-.14-1.14-.42-2.17-1.35-.8-.71-1.34-1.58-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.36.99 2.68 1.13 2.86.14.18 1.95 2.97 4.73 4.16.66.29 1.18.46 1.58.59.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.82-1.28.23-.63.23-1.16.16-1.28-.07-.12-.25-.18-.52-.32zM16.03 3.2c-7.11 0-12.89 5.78-12.89 12.89 0 2.28.6 4.51 1.75 6.48L3 29l6.6-1.73c1.9 1.04 4.04 1.58 6.22 1.58 7.11 0 12.89-5.78 12.89-12.89S23.14 3.2 16.03 3.2zm0 23.3c-2.03 0-4.03-.55-5.79-1.6l-.41-.24-3.92 1.03 1.05-3.82-.27-.43a10.45 10.45 0 0 1-1.66-5.69c0-5.78 4.7-10.48 10.48-10.48S26.51 9.97 26.51 15.75 21.81 26.5 16.03 26.5z"/>
         </svg>
       </span>
