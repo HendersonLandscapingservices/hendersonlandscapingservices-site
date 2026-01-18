@@ -2098,7 +2098,7 @@ function TestimonialsSection() {
     },
   ];
   return (
-    <section className="border-t border-slate-200 bg-slate-50">
+    <section className="border-t border-slate-200 bg-slate-50 mt-10">
       <div className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
         <h2 className="text-xl font-semibold tracking-tight text-slate-900 text-center">
           What our customers say
