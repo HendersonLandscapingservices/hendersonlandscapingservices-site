@@ -568,7 +568,7 @@ function ServicesSection({ onBookClick }) {
       nav: "Trees & hedges",
       title: "Tree and hedge care (including hedge planting)",
       summary:
-        "Maintenance and shaping for hedges and small to medium trees, plus new hedge planting for structure, privacy and wildlife value.",
+        "Maintenance and shaping for hedges and trees, with hedge planting for structure, privacy and wildlife value.",
       includes: [
         "Hedge trimming and shaping",
         "Sensible reductions and tidy-ups",
@@ -626,7 +626,7 @@ function ServicesSection({ onBookClick }) {
       nav: "Robot mowers",
       title: "Robot mower surveys, specification and installation",
       summary:
-        "A low-effort lawn option for suitable gardens. We survey, specify the right kit, install cleanly and set everything up properly.",
+        "A low-effort lawn option for suitable gardens. We survey, specify the right kit, install and set everything up properly.",
       includes: [
         "Site survey and suitability checks",
         "Specification and boundary planning",
@@ -677,7 +677,7 @@ function ServicesSection({ onBookClick }) {
       </div>
 
       {/* Carousel + details */}
-      <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
+      <div className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
         {/* Arrows only (no extra headings) */}
         <div className="flex items-center justify-end gap-2">
           <button
@@ -776,8 +776,7 @@ function ServicesSection({ onBookClick }) {
           Our online estimator gives a guide price for key services. Final quotes are always confirmed after a quick visit or photos of your garden.
         </p>
         <p className="mt-2 text-sm text-slate-600">
-          Don&apos;t see a service you need? Please ask - we aim to be a one-stop shop for all external hard and soft landscaping requirements.
-          If we can&apos;t quote directly, we&apos;ll usually be able to point you in the right direction.
+          Don&apos;t see a service you need? Please ask - we aim to be a one-stop shop for all external hard and soft landscaping requirements. If we can&apos;t quote directly, we&apos;ll usually be able to point you in the right direction.
         </p>
       </div>
     </section>
@@ -808,7 +807,7 @@ function AboutSection() {
             <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Henderson Landscaping Services
             </h1>
-            <p className="mt-3 text-sm leading-relaxed text-emerald-100">
+            <p className="mt-3 text-sm leading-relaxed text-emerald-100/90">
               Reliable, premium garden care and design across East Lancashire.
             </p>
           </div>
@@ -816,7 +815,7 @@ function AboutSection() {
       </div>
 
       {/* Owner + intro (with wrapped image on desktop) */}
-      <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
+      <div className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
             Who we are
@@ -956,7 +955,7 @@ function DesignSection({ onEnquireClick }) {
       </div>
 
       {/* Offerings */}
-      <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
+      <div className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
         <div className="grid gap-6 md:grid-cols-2">
           {offerings.map((item) => (
             <article
@@ -1092,7 +1091,7 @@ function BookingSection() {
             <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Send an enquiry or request a quote
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-emerald-100">
+            <p className="mt-3 text-sm leading-relaxed text-emerald-100/90">
               Share a few details about your garden and what you&apos;re looking
               for.
             </p>
@@ -1508,7 +1507,7 @@ function HintsTipsSection() {
         </div>
       </div>
       {/* Posts grid */}
-      <section className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
+      <section className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-xl font-semibold tracking-tight text-slate-900">
@@ -1654,7 +1653,7 @@ function WhatsAppWidget() {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="fixed bottom-16 left-1/2 z-40 inline-flex -translate-x-1/2 transform items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/30 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+      className="fixed bottom-12 left-1/2 z-40 inline-flex -translate-x-1/2 transform items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/30 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
       aria-label="Chat on WhatsApp"
       title="Chat on WhatsApp"
     >
@@ -1676,7 +1675,7 @@ function EstimatorWidgetButton({ onOpen }) {
     <button
       type="button"
       onClick={onOpen}
-      className="fixed bottom-4 left-1/2 z-40 inline-flex -translate-x-1/2 transform items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/40 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+      className="fixed bottom-12 left-1/2 z-40 inline-flex -translate-x-1/2 transform items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/40 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
     >
       <span className="h-2 w-2 rounded-full bg-emerald-200" />
       Quick price estimator
@@ -2104,7 +2103,7 @@ function TestimonialsSection() {
   ];
   return (
     <section className="border-t border-slate-200 bg-slate-50">
-      <div className="mx-auto max-w-6xl px-4 py-10 lg:py-12">
+      <div className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
         <h2 className="text-xl font-semibold tracking-tight text-slate-900">
           What our customers say
         </h2>
