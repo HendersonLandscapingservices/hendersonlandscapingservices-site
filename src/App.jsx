@@ -432,7 +432,7 @@ function Header({ activeTab, onTabChange }) {
             </div>
 
             {/* Navigation (scrollable on small screens to prevent layout break) */}
-            <nav className="flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50/80 p-1 text-xs font-medium text-slate-600 shadow-sm overflow-x-auto">
+            <nav className="flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50/80 p-1 text-xs font-medium text-slate-600 shadow-sm overflow-x-auto lg:overflow-visible lg:self-end lg:justify-end">
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.id}
@@ -2177,6 +2177,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
