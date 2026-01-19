@@ -940,9 +940,7 @@ function DesignSection({ onEnquireClick }) {
             <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Design
             </h1>
-            <p className="mt-2 text-sm text-emerald-100/90">
-              Hard and soft landscaping design service
-            </p>
+            <p className="mt-3 text-sm leading-relaxed text-emerald-100/90 sm:text-base">Hard and soft landscaping design service</p>
           </div>
         </div>
       </div>
@@ -2179,6 +2177,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
