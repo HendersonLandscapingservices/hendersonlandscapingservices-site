@@ -482,14 +482,14 @@ function HomeSection({ onBookClick }) {
             </p>
 
             {/* FIX: no nowrap, all-white headline, better leading on mobile */}
-            <h1 className="mt-3 text-3xl font-semibold tracking-tight leading-[1.08] sm:text-4xl lg:text-5xl">
+            <h1 className="mt-3 text-3xl font-semibold tracking-tight leading-tight sm:text-4xl lg:text-5xl">
               <span className="block">Stunning gardens</span>
               <span className="block text-white">
                 designed and maintained for you.
               </span>
             </h1>
 
-            <p className="mt-4 text-sm leading-relaxed text-emerald-100">
+            <p className="mt-3 text-base leading-relaxed text-emerald-100/90 sm:text-lg">
               From mowing and light maintenance to full garden design and
               renovations, our aim is to help homeowners and businesses across
               East Lancashire design and maintain gardens and outdoor spaces to
@@ -648,7 +648,7 @@ function ServicesSection({ onBookClick }) {
         </div>
         <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:flex-row lg:items-center lg:justify-between lg:py-12">
           <div className="max-w-xl">
-            <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h1 className="text-3xl font-semibold tracking-tight leading-tight text-white sm:text-4xl lg:text-5xl">
               Services
             </h1>
             <p className="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
@@ -797,10 +797,10 @@ function AboutSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
               About us
             </p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h1 className="mt-2 text-3xl font-semibold tracking-tight leading-tight text-white sm:text-4xl lg:text-5xl">
               Henderson Landscaping Services
             </h1>
-            <p className="mt-3 text-sm leading-relaxed text-emerald-100/90">
+            <p className="mt-3 text-base leading-relaxed text-emerald-100/90 sm:text-lg">
               Reliable, premium garden care and design across East Lancashire.
             </p>
           </div>
@@ -937,7 +937,7 @@ function DesignSection({ onEnquireClick }) {
         </div>
         <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:flex-row lg:items-center lg:justify-between lg:py-12">
           <div className="max-w-xl">
-            <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h1 className="text-3xl font-semibold tracking-tight leading-tight text-white sm:text-4xl lg:text-5xl">
               Design
             </h1>
             <p className="mt-3 text-sm leading-relaxed text-emerald-100/90 sm:text-base">Hard and soft landscaping design service</p>
@@ -1079,10 +1079,10 @@ function BookingSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-200">
               Enquiry
             </p>
-            <h2 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-2 text-3xl font-semibold tracking-tight leading-tight text-white sm:text-4xl lg:text-5xl">
               Send an enquiry or request a quote
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-emerald-100/90">
+            <p className="mt-3 text-base leading-relaxed text-emerald-100/90 sm:text-lg">
               Share a few details about your garden and what you&apos;re looking
               for.
             </p>
@@ -1393,10 +1393,10 @@ function GallerySection() {
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
               Gallery
             </p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h1 className="mt-2 text-3xl font-semibold tracking-tight leading-tight text-white sm:text-4xl lg:text-5xl">
               Recent work
             </h1>
-            <p className="mt-4 text-sm leading-relaxed text-emerald-100">
+            <p className="mt-3 text-base leading-relaxed text-emerald-100/90 sm:text-lg">
               A small selection of our recent work. We can provide references
               and pictures of other work on request.
             </p>
@@ -1480,10 +1480,10 @@ function HintsTipsSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
               Hints &amp; Tips
             </p>
-            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h1 className="mt-2 text-3xl font-semibold tracking-tight leading-tight text-white sm:text-4xl lg:text-5xl">
               Practical garden advice
             </h1>
-            <p className="mt-4 text-sm leading-relaxed text-emerald-100">
+            <p className="mt-3 text-base leading-relaxed text-emerald-100/90 sm:text-lg">
               Seasonal advice, common problems we see locally, and simple checklists you can follow yourself.
             </p>
           </div>
@@ -2177,6 +2177,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
