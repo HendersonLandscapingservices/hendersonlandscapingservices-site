@@ -677,8 +677,6 @@ function ServicesSection({ onBookClick }) {
           </p>
         </div>
       </div>
-      </div>
-
       {/* Carousel + details */}
       <div className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
         {/* Arrows only (no extra headings) */}
@@ -2189,6 +2187,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
