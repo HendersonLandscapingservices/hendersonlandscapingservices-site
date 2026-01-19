@@ -32,7 +32,6 @@ const hintsTipsPosts = [
     id: 1,
     title: "Spring Lawn Reset: 5 Simple Wins Before Easter",
     category: "Lawn Care",
-    readTime: "4 min read",
     summary:
       "A quick checklist to get your lawn ready for the season - without needing a full renovation.",
     bullets: [
@@ -41,13 +40,11 @@ const hintsTipsPosts = [
       "Simple feed options that actually help",
       "Dealing with moss and compaction",
     ],
-    published: "March 2025",
   },
   {
     id: 2,
     title: "Waterlogging & Drainage: Early Warning Signs in Burnley Gardens",
     category: "Drainage",
-    readTime: "3 min read",
     summary:
       "How to spot drainage issues early and what you can do before it becomes a bigger (and more expensive) problem.",
     bullets: [
@@ -56,13 +53,11 @@ const hintsTipsPosts = [
       "Simple tests you can do with a garden fork",
       "When it's time to bring in a drainage plan",
     ],
-    published: "February 2025",
   },
   {
     id: 3,
     title: "Low-Maintenance Structure: 5 Reliable Shrubs for Busy Households",
     category: "Planting Design",
-    readTime: "5 min read",
     summary:
       "Evergreen structure that looks good year-round with minimal fuss - ideal for family gardens.",
     bullets: [
@@ -70,13 +65,11 @@ const hintsTipsPosts = [
       "Planting for year-round interest",
       "Basic pruning rules most people overcomplicate",
     ],
-    published: "January 2025",
   },
   {
     id: 4,
     title: "How Often Should You Scarify Your Lawn?",
     category: "Lawn Care",
-    readTime: "3 min read",
     summary:
       "Scarifying is powerful - but overdoing it can set your lawn back. Here are some simple rules of thumb.",
     bullets: [
@@ -84,7 +77,6 @@ const hintsTipsPosts = [
       "Best times of year in the North West",
       "How scarifying links with aeration and feeding",
     ],
-    published: "November 2024",
   },
 ];
 
@@ -659,7 +651,7 @@ function ServicesSection({ onBookClick }) {
             <h1 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Services
             </h1>
-            <p className="mt-2 text-xs font-medium uppercase tracking-[0.18em] text-emerald-300">
+            <p className="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
               Burnley and surrounding areas
             </p>
           </div>
@@ -743,7 +735,7 @@ function ServicesSection({ onBookClick }) {
                   <button
                     type="button"
                     onClick={onBookClick}
-                    className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-sm hover:bg-emerald-500"
+                    className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500"
                   >
                     {cat.cta}
                   </button>
@@ -880,7 +872,7 @@ function AboutSection() {
           </p>
 
           <p className="text-sm font-medium text-slate-900">
-            If you want someone who will go the extra mile and treat your garden as if it were our own, you&apos;re in the right place.
+            If you want someone who will go the extra mile and treat your garden as if it were our own, you&apos;re in the right direction.
           </p>
 
           {/* Sustainability box with download */}
@@ -1400,7 +1392,7 @@ function GallerySection() {
         </div>
         <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:flex-row lg:items-center lg:justify-between lg:py-12">
           <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
               Gallery
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
@@ -1487,7 +1479,7 @@ function HintsTipsSection() {
         </div>
         <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:flex-row lg:items-center lg:justify-between lg:py-12">
           <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
               Hints &amp; Tips
             </p>
             <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
@@ -1637,11 +1629,11 @@ function FloatingActions({ onOpenEstimator }) {
     encodeURIComponent(WHATSAPP.message);
 
   return (
-    <div className="fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 transform items-center gap-3">
+    <div className="fixed bottom-6 left-1/2 z-[60] flex -translate-x-1/2 transform items-center gap-3">
       <button
         type="button"
         onClick={onOpenEstimator}
-        className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white shadow-lg shadow-emerald-900/40 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+        className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-900/40 hover:bg-emerald-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
       >
         <span className="h-2 w-2 rounded-full bg-emerald-200" />
         Quick price estimator
@@ -1651,12 +1643,12 @@ function FloatingActions({ onOpenEstimator }) {
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-emerald-700 shadow-lg shadow-emerald-900/20 ring-1 ring-emerald-200 hover:bg-emerald-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+        className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-emerald-700 shadow-lg shadow-emerald-900/20 ring-1 ring-emerald-200 hover:bg-emerald-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
         aria-label="Chat on WhatsApp"
         title="Chat on WhatsApp"
       >
-        <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-600 text-white">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-3.5 w-3.5" fill="currentColor" aria-hidden="true">
+        <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-600 text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-4 w-4" fill="currentColor" aria-hidden="true">
             <path d="M19.11 17.45c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.21-.59.07-.27-.14-1.14-.42-2.17-1.35-.8-.71-1.34-1.58-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.36.99 2.68 1.13 2.86.14.18 1.95 2.97 4.73 4.16.66.29 1.18.46 1.58.59.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.82-1.28.23-.63.23-1.16.16-1.28-.07-.12-.25-.18-.52-.32zM16.03 3.2c-7.11 0-12.89 5.78-12.89 12.89 0 2.28.6 4.51 1.75 6.48L3 29l6.6-1.73c1.9 1.04 4.04 1.58 6.22 1.58 7.11 0 12.89-5.78 12.89-12.89S23.14 3.2 16.03 3.2zm0 23.3c-2.03 0-4.03-.55-5.79-1.6l-.41-.24-3.92 1.03 1.05-3.82-.27-.43a10.45 10.45 0 0 1-1.66-5.69c0-5.78 4.7-10.48 10.48-10.48S26.51 9.97 26.51 15.75 21.81 26.5 16.03 26.5z"/>
           </svg>
         </span>
@@ -2137,7 +2129,7 @@ function Footer() {
 
         {/* Right: tagline + social icons tight together */}
         <div className="flex items-center gap-3 sm:ml-auto sm:justify-end">
-          <p className="whitespace-nowrap text-xs">
+          <p className="whitespace-nowrap text-sm">
             Premium garden care · North West
           </p>
 
@@ -2146,7 +2138,7 @@ function Footer() {
             href="https://www.instagram.com/hendersonlandscapingservices/"
             target="_blank"
             rel="noreferrer"
-            className="flex h-7 w-7 items-center justify-center rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-50"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-50"
             aria-label="Instagram"
           >
             <svg
@@ -2168,7 +2160,7 @@ function Footer() {
             href="https://www.facebook.com/p/Henderson-Landscaping-Services-100094012471732/"
             target="_blank"
             rel="noreferrer"
-            className="flex h-7 w-7 items-center justify-center rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-50"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-emerald-600 text-emerald-700 hover:bg-emerald-50"
             aria-label="Facebook"
           >
             <svg
@@ -2187,6 +2179,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
