@@ -666,21 +666,17 @@ function ServicesSection({ onBookClick }) {
         </div>
       </div>
 
-      {/* Domestic + commercial strip (bigger, short) */}
-            <div className="mx-auto max-w-6xl px-4 pt-6">
-        <div className="w-full max-w-3xl rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5 text-base text-slate-800">
-          <p className="text-lg font-semibold text-emerald-900">How to use this page</p>
-          <p className="mt-2 text-slate-700">
-            We keep this section updated with seasonal advice, common problems we see in local gardens, and simple checklists you can follow yourself - or use as a starting point for a professional visit.
+            {/* Domestic and commercial clients */}
+      <div className="mx-auto max-w-6xl px-4 pt-6">
+        <div className="w-full rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5 text-base text-slate-800">
+          <p className="text-lg font-semibold text-emerald-900">
+            Domestic and commercial clients
           </p>
-
-          <div className="mt-4 rounded-xl border border-emerald-100 bg-white/80 p-4">
-            <p className="text-base font-semibold text-slate-900">Latest hints &amp; tips</p>
-            <p className="mt-1 text-sm text-slate-700">
-              Browse our latest posts below. We will continue to add seasonal guides and deep dives over time.
-            </p>
-          </div>
+          <p className="mt-1 text-slate-700">
+            We work with homeowners, landlords, and businesses across East Lancashire.
+          </p>
         </div>
+      </div>
       </div>
 
       {/* Carousel + details */}
@@ -1478,9 +1474,51 @@ function GallerySection() {
 /**
  * HINTS & TIPS
  */
-{/* Posts grid */}
-      <section className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
-<div className="mt-8 grid gap-6 md:grid-cols-2">
+function HintsTipsSection() {
+  return (
+    <section>
+      {/* Banner with faded image */}
+      <div className="relative border-b border-slate-200 bg-slate-950 text-white">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <img
+            src="/images/gallery-2.jpg"
+            alt="Seasonal gardening advice and guides"
+            className="h-full w-full object-cover opacity-40"
+            decoding="async"
+          />
+        </div>
+        <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:flex-row lg:items-center lg:justify-between lg:py-12">
+          <div className="max-w-xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-300">
+              Hints &amp; Tips
+            </p>
+            <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Practical garden advice
+            </h1>
+            <p className="mt-4 text-sm leading-relaxed text-emerald-100">
+              Seasonal advice, common problems we see locally, and simple checklists you can follow yourself.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Combined intro box (single box) */}
+      <div className="mx-auto max-w-6xl px-4 pt-6">
+        <div className="w-full rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5 text-sm text-slate-800">
+          <p className="text-lg font-semibold text-emerald-900">How to use this page</p>
+          <p className="mt-2 text-slate-700">
+            We keep this section updated with seasonal advice, common problems we see in local gardens, and simple checklists you can follow yourself - or use as a starting point for a professional visit.
+          </p>
+          <p className="mt-4 text-base font-semibold text-slate-900">Latest hints &amp; tips</p>
+          <p className="mt-1 text-sm text-slate-700">
+            Browse our latest posts below. We will continue to add seasonal guides and deep dives over time.
+          </p>
+        </div>
+      </div>
+
+      {/* Posts grid (no dates/read-time rendered) */}
+      <section className="mx-auto max-w-6xl px-4 pt-6 pb-10 lg:pt-6 lg:pb-12">
+        <div className="grid gap-6 md:grid-cols-2">
           {hintsTipsPosts.map((post) => (
             <article
               key={post.id}
@@ -1493,7 +1531,7 @@ function GallerySection() {
                 <h3 className="mt-2 text-base font-semibold tracking-tight text-slate-900">
                   {post.title}
                 </h3>
-</header>
+              </header>
 
               <p className="mt-3 text-sm leading-relaxed text-slate-700">
                 {post.summary}
@@ -1533,8 +1571,7 @@ function GallerySection() {
             Downloadable winter guides
           </p>
           <p className="mt-2 text-[11px] text-slate-700">
-            Prefer a printable version? Save these quick-reference PDFs to keep
-            handy over winter.
+            Prefer a printable version? Save these quick-reference PDFs to keep handy over winter.
           </p>
           <div className="mt-3 grid gap-2 sm:grid-cols-2">
             <a
@@ -1556,9 +1593,7 @@ function GallerySection() {
             >
               <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
               <span>
-                <span className="font-semibold">
-                  Dealing with waterlogged lawns
-                </span>
+                <span className="font-semibold">Dealing with waterlogged lawns</span>
                 <br />
                 Simple checks and next steps for heavy soils.
               </span>
@@ -1582,9 +1617,7 @@ function GallerySection() {
             >
               <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500" />
               <span>
-                <span className="font-semibold">
-                  Using winter to plan ahead
-                </span>
+                <span className="font-semibold">Using winter to plan ahead</span>
                 <br />
                 Reflect, prioritise and plan improvements for next year.
               </span>
@@ -1595,9 +1628,6 @@ function GallerySection() {
     </section>
   );
 }
-
-
-
 /**
  * FLOATING ACTIONS (Estimator + WhatsApp)
  */
@@ -2159,6 +2189,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
