@@ -438,7 +438,7 @@ function Header({ activeTab, onTabChange }) {
                   key={item.id}
                   type="button"
                   onClick={() => onTabChange(item.id)}
-                  className={`shrink-0 rounded-full px-3 py-1.5 transition ${
+                  className={`shrink-0 rounded-full px-4 py-2 transition ${
                     activeTab === item.id
                       ? "bg-emerald-600 text-white shadow-sm"
                       : "hover:bg-white hover:text-slate-900"
@@ -670,7 +670,7 @@ function ServicesSection({ onBookClick }) {
         </div>
       </div>
       {/* Carousel + details */}
-      <div className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
+      <div className="mx-auto max-w-6xl px-4 pt-10 pb-10 lg:pt-12 lg:pb-12">
         {/* Arrows only (no extra headings) */}
         <div className="flex items-center justify-end gap-2">
           <button
@@ -808,7 +808,7 @@ function AboutSection() {
       </div>
 
       {/* Owner + intro (with wrapped image on desktop) */}
-      <div className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
+      <div className="mx-auto max-w-6xl px-4 pt-10 pb-10 lg:pt-12 lg:pb-12">
         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
             Who we are
@@ -946,7 +946,7 @@ function DesignSection({ onEnquireClick }) {
       </div>
 
       {/* Offerings */}
-      <div className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
+      <div className="mx-auto max-w-6xl px-4 pt-10 pb-10 lg:pt-12 lg:pb-12">
         <div className="grid gap-6 md:grid-cols-2">
           {offerings.map((item) => (
             <article
@@ -2075,8 +2075,8 @@ function TestimonialsSection() {
     },
   ];
   return (
-    <section className="border-t border-slate-200 bg-slate-50 mt-10">
-      <div className="mx-auto max-w-6xl px-4 pt-0 pb-10 lg:pt-0 lg:pb-12">
+    <section className="border-t border-slate-200 bg-slate-50 mt-14 lg:mt-16">
+      <div className="mx-auto max-w-6xl px-4 pt-10 pb-10 lg:pt-12 lg:pb-12">
         <h2 className="text-xl font-semibold tracking-tight text-slate-900 text-center">
           What our customers say
         </h2>
@@ -2177,6 +2177,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
