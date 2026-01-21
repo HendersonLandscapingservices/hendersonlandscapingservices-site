@@ -19,8 +19,8 @@ const WHATSAPP = {
 };
 const NAV_ITEMS = [
   { id: "home", label: "Home" },
-  { id: "design", label: "Design" },
-  { id: "services", label: "Services" },
+  { id: "design", label: "Garden Design" },
+  { id: "services", label: "Garden Maintenance" },
   { id: "about", label: "About us" },
   { id: "booking", label: "Enquiry" },
   { id: "gallery", label: "Gallery" },
@@ -340,7 +340,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-slate-50 text-slate-900 pb-36 sm:pb-28">
       <Header activeTab={activeTab} onTabChange={handleTabChange} />
 
       <main>
@@ -405,7 +405,7 @@ function Header({ activeTab, onTabChange }) {
                 </a>
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="font-semibold hover:text-slate-900"
+                  className="font-semibold hover:text-slate-900 break-all"
                 >
                   {CONTACT.email}
                 </a>
@@ -425,7 +425,7 @@ function Header({ activeTab, onTabChange }) {
               </a>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="font-semibold hover:text-slate-900"
+                className="font-semibold hover:text-slate-900 break-all"
               >
                 {CONTACT.email}
               </a>
@@ -490,10 +490,7 @@ function HomeSection({ onBookClick }) {
             </h1>
 
             <p className="mt-3 text-base leading-relaxed text-emerald-100/90 sm:text-lg">
-              From mowing and light maintenance to full garden design and
-              renovations, our aim is to help homeowners and businesses across
-              East Lancashire design and maintain gardens and outdoor spaces to
-              be proud of.
+              From garden design and renovations to dependable mowing and seasonal care, we help homeowners and businesses across East Lancashire create outdoor spaces to be proud of.
             </p>
 
             <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -519,7 +516,7 @@ function HomeSection({ onBookClick }) {
               </a>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="font-semibold text-white hover:text-emerald-100"
+                className="font-semibold text-white hover:text-emerald-100 break-all"
               >
                 Email: {CONTACT.email}
               </a>
@@ -649,7 +646,7 @@ function ServicesSection({ onBookClick }) {
         <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:flex-row lg:items-center lg:justify-between lg:py-12">
           <div className="max-w-xl">
             <h1 className="text-3xl font-semibold tracking-tight leading-tight text-white sm:text-4xl lg:text-5xl">
-              Services
+              Garden Maintenance
             </h1>
             <p className="mt-2 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
               Burnley and surrounding areas
@@ -938,7 +935,7 @@ function DesignSection({ onEnquireClick }) {
         <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:flex-row lg:items-center lg:justify-between lg:py-12">
           <div className="max-w-xl">
             <h1 className="text-3xl font-semibold tracking-tight leading-tight text-white sm:text-4xl lg:text-5xl">
-              Design
+              Garden Design
             </h1>
             <p className="mt-3 text-sm leading-relaxed text-emerald-100/90 sm:text-base">Hard and soft landscaping design service</p>
           </div>
@@ -2177,6 +2174,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
