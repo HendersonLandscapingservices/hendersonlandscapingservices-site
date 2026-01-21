@@ -406,7 +406,7 @@ function Header({ activeTab, onTabChange }) {
                 <a
                   href={`mailto:${CONTACT.email}`}
                   className="font-semibold hover:text-slate-900 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold hover:text-slate-900 break-all
-                >
+                 style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}>
                   {CONTACT.email}
                 </a>
               </div>
@@ -426,7 +426,7 @@ function Header({ activeTab, onTabChange }) {
               <a
                 href={`mailto:${CONTACT.email}`}
                 className="font-semibold hover:text-slate-900 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold hover:text-slate-900 break-all
-              >
+               style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}>
                 {CONTACT.email}
               </a>
             </div>
@@ -517,7 +517,7 @@ function HomeSection({ onBookClick }) {
               <a
                 href={`mailto:${CONTACT.email}`}
                 className="font-semibold text-white hover:text-emerald-100 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold text-white hover:text-emerald-100 break-all
-              >
+               style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}>
                 Email: {CONTACT.email}
               </a>
             </div>
@@ -2174,6 +2174,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
