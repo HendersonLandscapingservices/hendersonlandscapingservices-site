@@ -1,2 +1,6 @@
 _backup/
 build-error.log
+
+dist/
+*.bak
+
