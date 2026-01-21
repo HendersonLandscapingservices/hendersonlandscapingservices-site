@@ -405,7 +405,7 @@ function Header({ activeTab, onTabChange }) {
                 </a>
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="font-semibold hover:text-slate-900 break-all"
+                  className="font-semibold hover:text-slate-900 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold hover:text-slate-900 break-all
                 >
                   {CONTACT.email}
                 </a>
@@ -425,7 +425,7 @@ function Header({ activeTab, onTabChange }) {
               </a>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="font-semibold hover:text-slate-900 break-all"
+                className="font-semibold hover:text-slate-900 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold hover:text-slate-900 break-all
               >
                 {CONTACT.email}
               </a>
@@ -516,7 +516,7 @@ function HomeSection({ onBookClick }) {
               </a>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="font-semibold text-white hover:text-emerald-100 break-all"
+                className="font-semibold text-white hover:text-emerald-100 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold text-white hover:text-emerald-100 break-all
               >
                 Email: {CONTACT.email}
               </a>
@@ -2174,6 +2174,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
