@@ -20,17 +20,17 @@ function EmailWrap({ email, prefix = "" }) {
   const local = at >= 0 ? str.slice(0, at) : str;
   const domain = at >= 0 ? str.slice(at + 1) : "";
 
+  const line1 = prefix ? (prefix + " " + local + "@") : (local + "@");
+
   return (
     <>
       <span className="sm:hidden">
-        <span className="block">
-          {prefix ? `${prefix} ${local}@` : `${local}@`}
-        </span>
+        <span className="block">{line1}</span>
         <span className="block break-all">{domain}</span>
       </span>
 
       <span className="hidden sm:inline">
-        {prefix ? `${prefix} ${str}` : str}
+        {prefix ? (prefix + " " + str) : str}
       </span>
     </>
   );
@@ -2232,6 +2232,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
