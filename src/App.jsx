@@ -424,7 +424,7 @@ function Header({ activeTab, onTabChange }) {
             <img
               src="/images/henderson-logo.png"
               alt="Henderson Landscaping Services logo"
-              className="h-44 w-auto object-contain sm:h-52 lg:h-60"
+              className="h-24 w-auto shrink-0 object-contain sm:h-28 lg:h-32"
               decoding="async"
             />
             <div className="leading-tight min-w-0 w-full">
@@ -2216,6 +2216,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
