@@ -2161,7 +2161,7 @@ function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer data-build-id="build-20260117-202214" className="border-t border-slate-200 bg-white">
+    <footer data-build-id="build-8e02b21" className="border-t border-slate-200 bg-white">
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
         {/* Left: qualifications + copyright */}
         <div className="flex items-center gap-3">
@@ -2175,6 +2175,7 @@ function Footer() {
             />
           </div>
           <p>© {year} Henderson Landscaping Services.</p>
+          <p className="text-[10px] text-slate-400">Build: 8e02b21</p>
         </div>
 
         {/* Middle: removed contact info to reduce clutter */}
@@ -2231,6 +2232,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
