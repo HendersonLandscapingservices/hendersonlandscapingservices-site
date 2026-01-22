@@ -1,4 +1,4 @@
-ate, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 /**
  * CONTACT DETAILS
@@ -2232,6 +2232,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
