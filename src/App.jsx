@@ -443,7 +443,7 @@ function Header({ activeTab, onTabChange }) {
                 </a>
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="font-semibold hover:text-slate-900 block w-full max-w-full min-w-0 whitespace-normal break-all text-[13px] sm:text-base"
+                  className="font-semibold hover:text-slate-900 block w-full max-w-full min-w-0 whitespace-normal break-all text-[13px] sm:text-base lg:w-auto lg:whitespace-nowrap"
                   style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
                 >
                   <EmailWrap email={CONTACT.email} />
@@ -464,7 +464,7 @@ function Header({ activeTab, onTabChange }) {
               </a>
               <a
                   href={`mailto:${CONTACT.email}`}
-                  className="font-semibold hover:text-slate-900 block w-full max-w-full min-w-0 whitespace-normal break-all text-[13px] sm:text-base"
+                  className="font-semibold hover:text-slate-900 block w-full max-w-full min-w-0 whitespace-normal break-all text-[13px] sm:text-base lg:w-auto lg:whitespace-nowrap"
                   style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
                 >
                   <EmailWrap email={CONTACT.email} />
@@ -2216,6 +2216,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
