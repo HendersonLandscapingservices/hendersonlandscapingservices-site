@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+ate, useEffect } from "react";
 
 /**
  * CONTACT DETAILS
@@ -459,8 +459,11 @@ function Header({ activeTab, onTabChange }) {
                 </a>
                 <a
                   href={`mailto:${CONTACT.email}`}
-                  className="font-semibold hover:text-slate-900 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold hover:text-slate-900 break-all
-                 style={{ overflowWrap: block w-full max-w-full"anywhere", wordBreak: "break-word" }}>{CONTACT.email.replace("@","@\u200B").replaceAll(".",".\u200B")}</a>
+                  className="font-semibold hover:text-slate-900 block w-full max-w-full whitespace-normal break-words"
+                  style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
+                >
+                  <EmailWrap email={CONTACT.email} />
+                </a>
               </div>
             </div>
           </div>
@@ -476,9 +479,12 @@ function Header({ activeTab, onTabChange }) {
                 {CONTACT.phoneDisplay}
               </a>
               <a
-                href={`mailto:${CONTACT.email}`}
-                className="font-semibold hover:text-slate-900 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold hover:text-slate-900 break-all
-               style={{ overflowWrap: block w-full max-w-full"anywhere", wordBreak: "break-word" }}>{CONTACT.email.replace("@","@\u200B").replaceAll(".",".\u200B")}</a>
+                  href={`mailto:${CONTACT.email}`}
+                  className="font-semibold hover:text-slate-900 block w-full max-w-full whitespace-normal break-words"
+                  style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
+                >
+                  <EmailWrap email={CONTACT.email} />
+                </a>
             </div>
 
             {/* Navigation (scrollable on small screens to prevent layout break) */}
@@ -2222,6 +2228,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
