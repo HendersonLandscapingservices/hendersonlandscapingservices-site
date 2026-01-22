@@ -17,6 +17,21 @@ const WHATSAPP = {
   phoneIntl: "447766645221",
   message: "Hi Joel - I'd like a quote please. My postcode is ____ and I'm looking for help with ____.",
 };
+
+function EmailWithBreaks({ email }) {
+  const [local, domain = ""] = String(email || "").split("@");
+  const parts = domain.split(".");
+  return (
+    <>
+      {local}@<wbr />
+      {parts.map((p, i) => (
+        <span key={i}>
+          {i === 0 ? "" : "."}{p}<wbr />
+        </span>
+      ))}
+    </>
+  );
+}
 const NAV_ITEMS = [
   { id: "home", label: "Home" },
   { id: "design", label: "Garden Design" },
@@ -386,8 +401,7 @@ function Header({ activeTab, onTabChange }) {
             <img
               src="/images/henderson-logo.png"
               alt="Henderson Landscaping Services logo"
-              className="w-auto object-contain h-[104px] sm:h-[125px] lg:h-[146px]h-20 w-auto object-contain sm:h-24 lg:h-28
-              decoding="async"
+              className="h-32 w-auto object-contain sm:h-40 lg:h-48"async"
             />
             <div className="leading-tight min-w-0 w-full">
               <p className="text-base font-semibold tracking-tight text-slate-900 sm:text-lg lg:text-xl">
@@ -2168,6 +2182,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
