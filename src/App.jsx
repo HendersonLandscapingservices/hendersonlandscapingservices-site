@@ -386,10 +386,10 @@ function Header({ activeTab, onTabChange }) {
             <img
               src="/images/henderson-logo.png"
               alt="Henderson Landscaping Services logo"
-              className="h-20 w-auto object-contain sm:h-24 lg:h-28"
+              className="w-auto object-contain h-[104px] sm:h-[125px] lg:h-[146px]h-20 w-auto object-contain sm:h-24 lg:h-28
               decoding="async"
             />
-            <div className="leading-tight min-w-0">
+            <div className="leading-tight min-w-0 w-full">
               <p className="text-base font-semibold tracking-tight text-slate-900 sm:text-lg lg:text-xl">
                 Henderson Landscaping Services
               </p>
@@ -406,9 +406,7 @@ function Header({ activeTab, onTabChange }) {
                 <a
                   href={`mailto:${CONTACT.email}`}
                   className="font-semibold hover:text-slate-900 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold hover:text-slate-900 break-all
-                 style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}>
-                  {CONTACT.email}
-                </a>
+                 style={{ overflowWrap: block w-full max-w-full"anywhere", wordBreak: "break-word" }}>{CONTACT.email.replace("@","@\u200B").replaceAll(".",".\u200B")}</a>
               </div>
             </div>
           </div>
@@ -426,9 +424,7 @@ function Header({ activeTab, onTabChange }) {
               <a
                 href={`mailto:${CONTACT.email}`}
                 className="font-semibold hover:text-slate-900 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold hover:text-slate-900 break-all
-               style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}>
-                {CONTACT.email}
-              </a>
+               style={{ overflowWrap: block w-full max-w-full"anywhere", wordBreak: "break-word" }}>{CONTACT.email.replace("@","@\u200B").replaceAll(".",".\u200B")}</a>
             </div>
 
             {/* Navigation (scrollable on small screens to prevent layout break) */}
@@ -517,9 +513,7 @@ function HomeSection({ onBookClick }) {
               <a
                 href={`mailto:${CONTACT.email}`}
                 className="font-semibold text-white hover:text-emerald-100 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold text-white hover:text-emerald-100 break-all
-               style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}>
-                Email: {CONTACT.email}
-              </a>
+               style={{ overflowWrap: block w-full max-w-full"anywhere", wordBreak: "break-word" }}>Email: {CONTACT.email.replace("@","@\u200B").replaceAll(".",".\u200B")}</a>
             </div>
           </div>
         </div>
@@ -2174,6 +2168,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
