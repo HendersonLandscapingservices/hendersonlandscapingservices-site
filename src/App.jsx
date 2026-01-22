@@ -8,12 +8,6 @@ const CONTACT = {
   phoneTel: "07766645221",
   email: "enquiries@hendersonlandscapingservices.co.uk",
 };
-
-
-
-
-
-
 function EmailWrap({ email, prefix = "" }) {
   const str = String(email || "");
   const at = str.indexOf("@");
@@ -35,23 +29,13 @@ function EmailWrap({ email, prefix = "" }) {
     </>
   );
 }
-${local}@` : `${local}@`}
-        </span>
-        <span className="block">
-          {parts.map((p, i) => (
-            <span key={i}>
-              {i ? "." : ""}{p}<wbr />
-            </span>
-          ))}
-        </span>
-      </span>
 
-      <span className="hidden sm:inline">
-        {prefix ? `${prefix} ${str}` : str}
-      </span>
-    </>
-  );
-}
+
+
+
+
+
+
 const WHATSAPP = {
   phoneIntl: "447766645221",
   message: "Hi Joel - I'd like a quote please. My postcode is ____ and I'm looking for help with ____.",
@@ -2232,6 +2216,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
