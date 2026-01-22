@@ -13,6 +13,35 @@ const CONTACT = {
 
 
 
+
+function EmailWrap({ email, prefix = "" }) {
+  const str = String(email || "");
+  const at = str.indexOf("@");
+  const local = at >= 0 ? str.slice(0, at) : str;
+  const domain = at >= 0 ? str.slice(at + 1) : "";
+  const parts = domain ? domain.split(".") : [];
+
+  return (
+    <>
+      <span className="sm:hidden">
+        <span className="block">
+          {prefix ? `${prefix} ${local}@` : `${local}@`}
+        </span>
+        <span className="block">
+          {parts.map((p, i) => (
+            <span key={i}>
+              {i ? "." : ""}{p}<wbr />
+            </span>
+          ))}
+        </span>
+      </span>
+
+      <span className="hidden sm:inline">
+        {prefix ? `${prefix} ${str}` : str}
+      </span>
+    </>
+  );
+}
 const WHATSAPP = {
   phoneIntl: "447766645221",
   message: "Hi Joel - I'd like a quote please. My postcode is ____ and I'm looking for help with ____.",
@@ -401,7 +430,7 @@ function Header({ activeTab, onTabChange }) {
             <img
               src="/images/henderson-logo.png"
               alt="Henderson Landscaping Services logo"
-              className="h-32 w-auto object-contain sm:h-36 lg:h-40"async"
+              className="h-36 w-auto object-contain sm:h-44 lg:h-52"async"
             />
             <div className="leading-tight min-w-0 w-full">
               <p className="text-base font-semibold tracking-tight text-slate-900 sm:text-lg lg:text-xl">
@@ -2182,6 +2211,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
