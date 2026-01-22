@@ -440,7 +440,7 @@ function Header({ activeTab, onTabChange }) {
             <img
               src="/images/henderson-logo.png"
               alt="Henderson Landscaping Services logo"
-              className="h-40 w-auto object-contain sm:h-48 lg:h-56"
+              className="h-44 w-auto object-contain sm:h-52 lg:h-60"
               decoding="async"
             />
             <div className="leading-tight min-w-0 w-full">
@@ -572,8 +572,11 @@ function HomeSection({ onBookClick }) {
               </a>
               <a
                 href={`mailto:${CONTACT.email}`}
-                className="font-semibold text-white hover:text-emerald-100 break-all whitespace-normal break-words min-w-0 max-w-fullfont-semibold text-white hover:text-emerald-100 break-all
-               style={{ overflowWrap: block w-full max-w-full"anywhere", wordBreak: "break-word" }}>Email: {CONTACT.email.replace("@","@\u200B").replaceAll(".",".\u200B")}</a>
+                className="font-semibold text-white hover:text-emerald-100 block w-full max-w-full whitespace-normal break-words"
+                style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
+              >
+                <EmailWrap email={CONTACT.email} prefix="Email:" />
+              </a>
             </div>
           </div>
         </div>
@@ -2228,6 +2231,7 @@ function Footer() {
 }
 
 export default App;
+
 
 
 
