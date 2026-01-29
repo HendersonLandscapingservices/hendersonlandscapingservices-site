@@ -848,18 +848,20 @@ function AboutSection() {
       {/* Owner + intro (with wrapped image on desktop) */}
       <div className="mx-auto max-w-6xl px-4 pt-10 pb-10 lg:pt-12 lg:pb-12">
         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">
-            Who we are
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">Our story</p>
 
           <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-start">
-                        <div className="order-2 flex-1 space-y-3 text-sm leading-relaxed text-slate-700 lg:order-1">
+                                    <div className="order-2 flex-1 space-y-3 text-sm leading-relaxed text-slate-700 lg:order-1">
               <p>
-                Henderson Landscaping Services provides high-standard garden and grounds care for homeowners and businesses across East Lancashire. We specialise in precision lawn care, hedge and tree management, garden design and planting. Our work is tidy, consistent and supported by clear communication.
+                Founded in early 2020, following several years with local gardening companies and as an Estates Manager for a local council, Henderson Landscaping Services was built to provide a reliable, high-standard alternative to rushed maintenance and inconsistent results.
               </p>
 
               <p>
-                Whether it’s a private garden you want to enjoy more, or a site that needs to remain consistently presentable for residents, customers or tenants, we work with care and deliver a professional finish on every visit.
+                We’ve grown through repeat work and trusted recommendations. Today we support a loyal portfolio of domestic and commercial clients across East Lancashire—maintaining everything from small front gardens and larger family spaces to new-build shared areas, courtyards and managed sites that must remain safe, compliant and consistently presentable year-round.
+              </p>
+
+              <p>
+                Alongside regular maintenance, we also deliver one-off projects including hard and soft landscaping, planting schemes and full garden makeovers.
               </p>
             </div>
 
@@ -878,28 +880,25 @@ function AboutSection() {
         {/* Main about copy - centred block, plus sustainability box */}
                 <div className="mx-auto mt-10 max-w-3xl space-y-4 text-sm leading-relaxed text-slate-700">
           
+          
           <h3 className="pt-1 text-base font-semibold tracking-tight text-slate-900">
-            Our story
-          </h3>
-
-          <p>
-            Henderson Landscaping Services provides high-standard garden and grounds care for homeowners and businesses across East Lancashire. We specialise in precision lawn care, hedge and tree management, garden design and planting, and we maintain a consistently high finish that supports healthy growth and keeps sites safe and well-presented year-round.
-          </p>
-
-          <p>
-            Founded in early 2020, following several years with local gardening companies and as an Estates Manager for a local council, the business has grown through repeat work and trusted recommendations. Today we support a loyal portfolio of domestic and commercial clients — from family gardens and front gardens to new-build shared areas, courtyards and managed sites that must remain safe, compliant and consistently presentable.
-          </p>
-
-          <p>
-            Alongside regular maintenance, we also deliver one-off projects including hard and soft landscaping, planting schemes and full garden makeovers. We regularly support a range of organisations, including charities, schools and housing developers.
-          </p>
-
-          <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
             Our mission
           </h3>
 
           <p className="text-sm font-medium text-slate-900">
             To make outdoor spaces easier to enjoy and manage by delivering dependable, high-quality work and straightforward professional guidance.
+          </p>
+
+          <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
+            What we do
+          </h3>
+
+          <p>
+            We provide high-standard garden and grounds care for homeowners and businesses across East Lancashire. Our core services include precision lawn care, hedge and tree management, garden maintenance, and planting—delivered with tidy workmanship and clear communication.
+          </p>
+
+          <p>
+            Whether it’s a private garden you want to enjoy more, or a site that needs to remain consistently presentable for residents, customers or tenants, we work with care and deliver a professional finish on every visit.
           </p>
 
           <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
@@ -914,12 +913,37 @@ function AboutSection() {
             <li><span className="font-semibold">Sustainability</span> — reduced emissions and minimal chemical use where appropriate</li>
           </ul>
 
+          <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
+            Sustainability
+          </h3>
+
+          <p>
+            Sustainability isn’t an add-on for us—it’s built into how we operate. We use electric vehicles and battery tools wherever practical, minimise chemical treatments, and prioritise good horticultural practice. All electricity we use is from renewable sources, with around 25% generated via our own solar and battery system.
+          </p>
+
+          <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
+            Design services
+          </h3>
+
+          <p>
+            For clients outside our normal catchment area, or those wanting a clearer long-term plan, we offer garden design support—from layout concepts and planting schemes to phased improvement plans that provide a clear route from idea to delivery. Where helpful, we can assist with liaising with local tradespeople so you can work with qualified individuals at fair prices.
+          </p>
+
+          <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
+            Led by Joel Henderson
+          </h3>
+
+          <p>
+            The business is led by Joel Henderson, owner and lead landscaper. Joel holds City &amp; Guilds qualifications, is an NPTC-qualified tree surgeon, and maintains a strong focus on continual professional development through ongoing training.
+          </p>
+
           <p className="text-sm font-medium text-slate-900">
             If you’d like to discuss a regular maintenance programme or a one-off project, we’d love to help. Call{" "}
             <a className="underline underline-offset-2" href={"tel:" + CONTACT.phoneTel}>
               {CONTACT.phoneDisplay}
             </a>.
           </p>
+
 
 
           {/* Sustainability box with download */}
