@@ -853,18 +853,13 @@ function AboutSection() {
           </p>
 
           <div className="mt-4 flex flex-col gap-5 lg:flex-row lg:items-start">
-            <div className="order-2 flex-1 space-y-3 text-sm leading-relaxed text-slate-700 lg:order-1">
+                        <div className="order-2 flex-1 space-y-3 text-sm leading-relaxed text-slate-700 lg:order-1">
               <p>
-                Henderson Landscaping Services was established to provide homeowners and businesses with a reliable,
-                considered alternative to rushed maintenance and unclear pricing. We deliver high-quality lawn care,
-                hedge management, practical planting and effective problem-solving, supported by clear communication
-                and a consistent, professional service.
+                Henderson Landscaping Services provides high-standard garden and grounds care for homeowners and businesses across East Lancashire. We specialise in precision lawn care, hedge and tree management, garden design and planting. Our work is tidy, consistent and supported by clear communication.
               </p>
 
               <p>
-                We support a long-standing portfolio of domestic and commercial clients across East Lancashire, maintaining
-                everything from small front gardens to shared spaces and courtyards that must remain tidy, safe and presentable
-                throughout the year.
+                Whether it’s a private garden you want to enjoy more, or a site that needs to remain consistently presentable for residents, customers or tenants, we work with care and deliver a professional finish on every visit.
               </p>
             </div>
 
@@ -881,36 +876,64 @@ function AboutSection() {
         </div>
 
         {/* Main about copy - centred block, plus sustainability box */}
-        <div className="mx-auto mt-10 max-w-3xl space-y-4 text-sm leading-relaxed text-slate-700">
+                <div className="mx-auto mt-10 max-w-3xl space-y-4 text-sm leading-relaxed text-slate-700">
           <p>
-            After years working for local gardening companies and the council, I decided it was time to start my own
-            gardening business at the beginning of 2020. It was not the easiest time to launch, arriving just as the pandemic hit,
-            but the business has grown from strength to strength. Today we look after a loyal customer base of regular domestic and
-            commercial clients across East Lancashire, alongside one-off commissions for hard and soft landscaping and full garden makeovers.
+            Henderson Landscaping Services provides high-standard garden and grounds care for homeowners and businesses across East Lancashire. We specialise in precision lawn care, hedge and tree management, garden design and planting. We maintain a consistently high finish, supporting healthy growth and keeping outdoor spaces safe and well-presented throughout the year.
+          </p>
+
+          <p>
+            The business is led by Joel Henderson, owner and lead landscaper. Joel holds City &amp; Guilds qualifications, is an NPTC-qualified tree surgeon and maintains a strong focus on continual professional development through ongoing training.
+          </p>
+
+          <p>
+            Founded in early 2020, following several years with local gardening companies and as an Estates Manager for a local council, Henderson Landscaping Services has grown through repeat work and trusted recommendations. Today we support a loyal portfolio of domestic and commercial clients, maintaining everything from small front gardens and larger family spaces to new-build shared areas, courtyards and managed sites that must remain safe, compliant and presentable year-round.
+          </p>
+
+          <p>
+            Alongside regular maintenance, we also deliver one-off projects including hard and soft landscaping, planting schemes and full garden makeovers. We regularly support a range of organisations, including charities, schools and housing developers.
+          </p>
+
+          <p className="text-sm font-semibold text-slate-900">
+            Our mission is simple: to make outdoor spaces easier to enjoy and manage by delivering dependable, high-quality work and straightforward professional guidance.
+          </p>
+
+          <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
+            Our values
+          </h3>
+          <ul className="list-disc space-y-2 pl-5">
+            <li><span className="font-semibold">Quality over speed</span> — careful workmanship and results that last</li>
+            <li><span className="font-semibold">Reliability and communication</span> — clear updates and consistent service delivery</li>
+            <li><span className="font-semibold">Respect for your property</span> — safe working practices and tidy completion</li>
+            <li><span className="font-semibold">Practical horticulture</span> — sensible recommendations aligned to goals, budget and timescale</li>
+            <li><span className="font-semibold">Sustainability</span> — reduced emissions and minimal chemical use where appropriate</li>
+          </ul>
+
+          <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
+            Sustainability
+          </h3>
+          <p>
+            Sustainability isn’t an add-on for us — it’s built into how we operate. After years working with petrol equipment and chemical-heavy approaches elsewhere, Joel was determined to run a business that puts the environment first.
           </p>
           <p>
-            We take sustainability very seriously and are passionate about caring for the environment. Having spent many years working with
-            petrol equipment and pesticides for other gardeners, I was determined that my own business would put sustainability at the heart of what we do.
-            We drive electric vehicles, use battery tools wherever possible and minimise the use of chemicals. All of the electricity we use is from renewable sources,
-            around 25% of which comes from our own solar and battery system.
+            We use electric vehicles and battery tools wherever practical, minimise chemical treatments, and prioritise good horticultural practice. All electricity we use is from renewable sources, with around 25% generated via our own solar and battery system. Battery equipment also provides a quieter, cleaner approach that suits residential settings and helps reduce impact across commercial sites.
           </p>
+
+          <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
+            Design services
+          </h3>
           <p>
-            Our work ranges from regular lawn care and light maintenance through to full garden renovations, problem-solving and planting schemes.
-            We treat every garden as if it were our own, taking time to understand how you use the space and what you want it to do for you,
-            then suggesting practical steps that fit your budget and timescale.
+            For clients outside our normal catchment area, or those wanting a clearer long-term plan, we offer garden design support — from layout concepts and planting schemes to phased improvement plans that provide a clear route from idea to delivery. Where helpful, we can assist with liaising with local tradespeople so you can bring the design to life with qualified individuals at fair prices.
           </p>
+
           <p>
-            We are also able to offer garden design services for clients outside our normal catchment area. From ideas and layout concepts to full planting schemes
-            and phased improvement plans, we can help you get from a rough idea to a clear, buildable design. Where helpful, we can also assist you in liaising with
-            local tradespeople, so you receive fair prices and work with qualified individuals who can turn those plans into reality.
-          </p>
-          <p>
-            I hold City &amp; Guilds qualifications and continue to enhance my knowledge with training courses to offer the best possible experience for our customers.
-            To further develop the business, I am currently studying a degree in horticulture and garden design, combining practical on-site experience with up-to-date theory and best practice.
+            Looking ahead, we’re committed to growing responsibly while maintaining the high standards our clients expect. We will continue to invest in training, equipment and sustainable working practices, delivering professional services across domestic and commercial sites and strengthening the reputation we have built across East Lancashire.
           </p>
 
           <p className="text-sm font-medium text-slate-900">
-            If you want someone who will go the extra mile and treat your garden as if it were our own, you&apos;re in the right direction.
+            If you’d like to discuss a regular maintenance programme or a one-off project, we’d love to help. Call{" "}
+            <a className="underline underline-offset-2" href={`tel:${CONTACT.phoneTel}`}>
+              {CONTACT.phoneDisplay}
+            </a>.
           </p>
 
           {/* Sustainability box with download */}
@@ -919,12 +942,10 @@ function AboutSection() {
               Sustainability &amp; environment
             </p>
             <p className="mt-2">
-              We are committed to running Henderson Landscaping Services in a way that&apos;s kinder to the environment.
-              Our goal is to make the business operationally carbon-neutral by <strong>2035</strong> and to move towards{" "}
-              <strong>chemical-free maintenance</strong> wherever it&apos;s practical to do so.
+              Sustainability is built into how we work: electric vehicles, battery tools wherever practical, reduced chemical use, and 100% renewable electricity — with around <strong>25%</strong> generated via our own solar and battery system.
             </p>
             <ul className="mt-2 list-disc space-y-1 pl-4">
-              <li>Expanding the use of electric vehicles and battery-powered tools across the business.</li>
+              <li>Expanding electric vehicles and battery-powered tools across the business.</li>
               <li>Minimising routine use of synthetic pesticides and weedkillers, favouring cultural controls and lower-impact options.</li>
               <li>Using 100% renewable electricity, with a growing proportion generated by our own solar and battery system.</li>
             </ul>
