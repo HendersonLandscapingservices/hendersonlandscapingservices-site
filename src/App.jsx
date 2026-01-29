@@ -877,29 +877,35 @@ function AboutSection() {
 
         {/* Main about copy - centred block, plus sustainability box */}
                 <div className="mx-auto mt-10 max-w-3xl space-y-4 text-sm leading-relaxed text-slate-700">
+          
+          <h3 className="pt-1 text-base font-semibold tracking-tight text-slate-900">
+            Our story
+          </h3>
+
           <p>
-            Henderson Landscaping Services provides high-standard garden and grounds care for homeowners and businesses across East Lancashire. We specialise in precision lawn care, hedge and tree management, garden design and planting. We maintain a consistently high finish, supporting healthy growth and keeping outdoor spaces safe and well-presented throughout the year.
+            Henderson Landscaping Services provides high-standard garden and grounds care for homeowners and businesses across East Lancashire. We specialise in precision lawn care, hedge and tree management, garden design and planting, and we maintain a consistently high finish that supports healthy growth and keeps sites safe and well-presented year-round.
           </p>
 
           <p>
-            The business is led by Joel Henderson, owner and lead landscaper. Joel holds City &amp; Guilds qualifications, is an NPTC-qualified tree surgeon and maintains a strong focus on continual professional development through ongoing training.
-          </p>
-
-          <p>
-            Founded in early 2020, following several years with local gardening companies and as an Estates Manager for a local council, Henderson Landscaping Services has grown through repeat work and trusted recommendations. Today we support a loyal portfolio of domestic and commercial clients, maintaining everything from small front gardens and larger family spaces to new-build shared areas, courtyards and managed sites that must remain safe, compliant and presentable year-round.
+            Founded in early 2020, following several years with local gardening companies and as an Estates Manager for a local council, the business has grown through repeat work and trusted recommendations. Today we support a loyal portfolio of domestic and commercial clients — from family gardens and front gardens to new-build shared areas, courtyards and managed sites that must remain safe, compliant and consistently presentable.
           </p>
 
           <p>
             Alongside regular maintenance, we also deliver one-off projects including hard and soft landscaping, planting schemes and full garden makeovers. We regularly support a range of organisations, including charities, schools and housing developers.
           </p>
 
-          <p className="text-sm font-semibold text-slate-900">
-            Our mission is simple: to make outdoor spaces easier to enjoy and manage by delivering dependable, high-quality work and straightforward professional guidance.
+          <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
+            Our mission
+          </h3>
+
+          <p className="text-sm font-medium text-slate-900">
+            To make outdoor spaces easier to enjoy and manage by delivering dependable, high-quality work and straightforward professional guidance.
           </p>
 
           <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
             Our values
           </h3>
+
           <ul className="list-disc space-y-2 pl-5">
             <li><span className="font-semibold">Quality over speed</span> — careful workmanship and results that last</li>
             <li><span className="font-semibold">Reliability and communication</span> — clear updates and consistent service delivery</li>
@@ -908,33 +914,13 @@ function AboutSection() {
             <li><span className="font-semibold">Sustainability</span> — reduced emissions and minimal chemical use where appropriate</li>
           </ul>
 
-          <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
-            Sustainability
-          </h3>
-          <p>
-            Sustainability isn’t an add-on for us — it’s built into how we operate. After years working with petrol equipment and chemical-heavy approaches elsewhere, Joel was determined to run a business that puts the environment first.
-          </p>
-          <p>
-            We use electric vehicles and battery tools wherever practical, minimise chemical treatments, and prioritise good horticultural practice. All electricity we use is from renewable sources, with around 25% generated via our own solar and battery system. Battery equipment also provides a quieter, cleaner approach that suits residential settings and helps reduce impact across commercial sites.
-          </p>
-
-          <h3 className="pt-4 text-base font-semibold tracking-tight text-slate-900">
-            Design services
-          </h3>
-          <p>
-            For clients outside our normal catchment area, or those wanting a clearer long-term plan, we offer garden design support — from layout concepts and planting schemes to phased improvement plans that provide a clear route from idea to delivery. Where helpful, we can assist with liaising with local tradespeople so you can bring the design to life with qualified individuals at fair prices.
-          </p>
-
-          <p>
-            Looking ahead, we’re committed to growing responsibly while maintaining the high standards our clients expect. We will continue to invest in training, equipment and sustainable working practices, delivering professional services across domestic and commercial sites and strengthening the reputation we have built across East Lancashire.
-          </p>
-
           <p className="text-sm font-medium text-slate-900">
             If you’d like to discuss a regular maintenance programme or a one-off project, we’d love to help. Call{" "}
-            <a className="underline underline-offset-2" href={`tel:${CONTACT.phoneTel}`}>
+            <a className="underline underline-offset-2" href={"tel:" + CONTACT.phoneTel}>
               {CONTACT.phoneDisplay}
             </a>.
           </p>
+
 
           {/* Sustainability box with download */}
           <div className="mt-6 rounded-2xl border border-emerald-100 bg-emerald-50/70 p-4 text-xs text-slate-800">
