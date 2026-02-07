@@ -1,0 +1,56 @@
+export const hintsTipsPosts = [
+  {
+    id: 1,
+    title: "Spring Lawn Reset: 5 Simple Wins Before Easter",
+    category: "Lawn Care",
+    readTime: "4 min read",
+    summary: "A quick checklist to get your lawn ready for the season – without needing a full renovation.",
+    bullets: [
+      "When and how to do your first cut",
+      "Why you should avoid scalping the lawn",
+      "Simple feed options that actually help",
+      "Dealing with moss and compaction",
+    ],
+    published: "March 2025",
+  },
+  {
+    id: 2,
+    title: "Waterlogging & Drainage: Early Warning Signs in Burnley Gardens",
+    category: "Drainage",
+    readTime: "3 min read",
+    summary: "How to spot drainage issues early and what you can do before it becomes a bigger (and more expensive) problem.",
+    bullets: [
+      "Tell-tale puddles that don’t disappear",
+      "What your lawn colour is telling you",
+      "Simple tests you can do with a garden fork",
+      "When it’s time to bring in a drainage plan",
+    ],
+    published: "February 2025",
+  },
+  {
+    id: 3,
+    title: "Low-Maintenance Structure: 5 Reliable Shrubs for Busy Households",
+    category: "Planting Design",
+    readTime: "5 min read",
+    summary: "Evergreen structure that looks good year-round with minimal fuss – ideal for family gardens.",
+    bullets: [
+      "How to choose shrubs that don’t dominate the space",
+      "Planting for year-round interest",
+      "Basic pruning rules most people overcomplicate",
+    ],
+    published: "January 2025",
+  },
+  {
+    id: 4,
+    title: "How Often Should You Scarify Your Lawn?",
+    category: "Lawn Care",
+    readTime: "3 min read",
+    summary: "Scarifying is powerful – but overdoing it can set your lawn back. Here are some simple rules of thumb.",
+    bullets: [
+      "Signs your lawn is ready (or not ready)",
+      "Best times of year in the North West",
+      "How scarifying links with aeration and feeding",
+    ],
+    published: "November 2024",
+  },
+];

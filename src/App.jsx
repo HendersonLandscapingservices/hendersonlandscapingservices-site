@@ -62,8 +62,8 @@ const NAV_ITEMS = [
   { id: "about", label: "About us" },
   { id: "booking", label: "Enquiry" },
   { id: "gallery", label: "Gallery" },
-    { id: "faq", label: "FAQ" },
-  { id: "hints", label: "Hints & Tips" },
+{ id: "hints", label: "Hints & Tips" },
+  { id: "faq", label: "FAQ" },
 ];
 
 const hintsTipsPosts = [
@@ -474,13 +474,13 @@ function Header({ activeTab, onTabChange }) {
             </div>
 
             {/* Navigation (scrollable on small screens to prevent layout break) */}
-            <nav className="flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50/80 p-1 text-xs font-medium text-slate-600 shadow-sm overflow-x-auto lg:overflow-visible lg:self-end lg:justify-end">
+            <nav className="flex items-center gap-0.5 rounded-full border border-slate-200 bg-slate-50/80 p-1 text-[11px] font-medium text-slate-600 shadow-sm overflow-x-auto lg:overflow-visible lg:self-end lg:justify-end">
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => onTabChange(item.id)}
-                  className={`shrink-0 rounded-full px-4 py-2 transition ${
+                  className={`shrink-0 rounded-full px-3 py-1.5 transition ${
                     activeTab === item.id
                       ? "bg-emerald-600 text-white shadow-sm"
                       : "hover:bg-white hover:text-slate-900"
@@ -1737,6 +1737,15 @@ function FaqSection() {
   return (
     <section>
       <div className="relative border-b border-slate-200 bg-slate-950 text-white">
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <img
+            src="/images/gallery-2.jpg"
+            alt="Frequently asked questions - garden maintenance and landscaping"
+            className="h-full w-full object-cover opacity-40"
+            decoding="async"
+          />
+        </div>
+
         <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:py-12">
           <div className="max-w-2xl">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
