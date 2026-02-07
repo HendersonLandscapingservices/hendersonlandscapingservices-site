@@ -62,6 +62,7 @@ const NAV_ITEMS = [
   { id: "about", label: "About us" },
   { id: "booking", label: "Enquiry" },
   { id: "gallery", label: "Gallery" },
+    { id: "faq", label: "FAQ" },
   { id: "hints", label: "Hints & Tips" },
 ];
 
@@ -395,7 +396,8 @@ function App() {
         )}
         {activeTab === "gallery" && <GallerySection />}
         {activeTab === "hints" && <HintsTipsSection />}
-      </main>
+              {activeTab === "faq" && <FaqSection />}
+</main>
 
       <Footer />
 
@@ -1685,6 +1687,93 @@ function HintsTipsSection() {
     </section>
   );
 }
+/**
+ * FAQ
+ */
+function FaqSection() {
+  const faqs = [
+    {
+      q: "What areas do you cover?",
+      a: "We mainly cover Burnley and surrounding East Lancashire areas. Send your postcode and we’ll confirm.",
+    },
+    {
+      q: "How do I get a quote?",
+      a: "Send your postcode, what you need doing, and ideally 4–8 photos (wide shots + close-ups). We can often quote from photos, or arrange a quick visit.",
+    },
+    {
+      q: "What photos help most?",
+      a: "Wide shot of the whole area, close-ups of problem spots, and one photo showing access (gates/steps/parking).",
+    },
+    {
+      q: "Do you offer regular maintenance visits?",
+      a: "Yes — regular visits are ideal for lawns, hedges, and ongoing tidy-ups. We can recommend a schedule based on growth and site needs.",
+    },
+    {
+      q: "Do you do lawn mowing and lawn improvements (scarifying/aeration)?",
+      a: "Yes — we offer mowing plus seasonal improvement work including scarifying, aeration, overseeding and lawn renovation where needed.",
+    },
+    {
+      q: "Do you trim and reduce hedges (and remove waste)?",
+      a: "Yes. For hedge quotes, share length, approx height, access to one/both sides and a photo. We can remove green waste or leave it for composting if preferred.",
+    },
+    {
+      q: "Do you do tree work?",
+      a: "Yes — for safety and accuracy we’ll usually quote from photos or after a quick look. Please share photos of the whole tree, base, and nearby features (buildings/roads/cables).",
+    },
+    {
+      q: "Do you do garden clearances and tidy-ups?",
+      a: "Yes — we can bring gardens back under control and recommend a phased plan if needed. Photos help us quote accurately.",
+    },
+    {
+      q: "Do you do commercial/estate maintenance?",
+      a: "Yes — weeding, litter picking, hedges and seasonal visits. Share the site postcode and what’s included now and we’ll suggest a visit schedule.",
+    },
+    {
+      q: "What happens if the weather is bad?",
+      a: "Some work can’t be done safely in poor weather. If we need to reschedule, we’ll contact you as early as possible.",
+    },
+  ];
+
+  return (
+    <section>
+      <div className="relative border-b border-slate-200 bg-slate-950 text-white">
+        <div className="relative mx-auto flex min-h-[220px] max-w-6xl flex-col gap-4 px-4 py-10 lg:min-h-[240px] lg:py-12">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
+              FAQ
+            </p>
+            <h1 className="mt-2 text-3xl font-semibold tracking-tight leading-tight text-white sm:text-4xl lg:text-5xl">
+              Common questions
+            </h1>
+            <p className="mt-3 text-base leading-relaxed text-emerald-100/90 sm:text-lg">
+              Quick answers to the most common questions. If you can’t find what you need, send an enquiry and we’ll help.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-4xl px-4 py-10 lg:py-12">
+        <div className="space-y-3">
+          {faqs.map((item) => (
+            <details
+              key={item.q}
+              className="group rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm"
+            >
+              <summary className="flex cursor-pointer items-center justify-between gap-3 text-sm font-semibold text-slate-900">
+                <span>{item.q}</span>
+                <span className="text-slate-400 group-open:rotate-180 transition">⌄</span>
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-slate-700">
+                {item.a}
+              </p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /**
  * FLOATING ACTIONS (Estimator + WhatsApp)
  */
