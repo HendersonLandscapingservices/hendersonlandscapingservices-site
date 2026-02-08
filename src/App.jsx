@@ -474,7 +474,7 @@ function Header({ activeTab, onTabChange }) {
             </div>
 
             {/* Navigation (scrollable on small screens to prevent layout break) */}
-            <nav className="flex w-full -mx-2 px-2 items-center justify-start gap-0.5 rounded-full border border-slate-200 bg-slate-50/80 p-0.5 text-[10px] sm:text-sm font-medium text-slate-600 shadow-sm overflow-x-auto lg:overflow-visible lg:self-end lg:justify-end">
+            <nav className="flex w-full items-center justify-start gap-0.5 rounded-full border border-slate-200 bg-slate-50/80 px-2.5 py-1 text-[10px] font-medium text-slate-600 shadow-sm overflow-x-auto overflow-y-hidden lg:w-auto lg:justify-end lg:overflow-visible lg:self-end">
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.id}
