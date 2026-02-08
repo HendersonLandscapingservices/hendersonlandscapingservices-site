@@ -474,13 +474,13 @@ function Header({ activeTab, onTabChange }) {
             </div>
 
             {/* Navigation (scrollable on small screens to prevent layout break) */}
-            <nav className="flex w-full lg:w-auto flex-nowrap items-center justify-start gap-px rounded-full border border-slate-200 bg-slate-50/80 px-2 py-1 text-xs sm:text-sm font-medium text-slate-600 shadow-sm overflow-x-auto overflow-y-hidden no-scrollbar lg:overflow-visible lg:self-end">
+            <nav className="flex w-full lg:w-auto flex-nowrap items-center justify-start gap-0 rounded-full border border-slate-200 bg-slate-50/80 px-2 py-1 text-xs sm:text-sm font-medium text-slate-600 shadow-sm overflow-x-auto overflow-y-hidden no-scrollbar lg:overflow-x-visible lg:overflow-y-visible lg:self-end">
               {NAV_ITEMS.map((item) => (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => onTabChange(item.id)}
-                  className={`shrink-0 rounded-full px-2 py-1.5 sm:px-3 sm:py-2 transition ${
+                  className={`shrink-0 rounded-full px-1.5 py-1.5 sm:px-2.5 sm:py-2 transition ${
                     activeTab === item.id
                       ? "bg-emerald-600 text-white shadow-sm"
                       : "hover:bg-white hover:text-slate-900"
